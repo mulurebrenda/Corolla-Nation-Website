@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-width: 360px;
+}
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+:root {
+  --background-color: #e1e4e8;
+  --about-background-color: #cbd8df;
+  --events-contact-background-color: #fefefe;
+  --gallery-background-color: #dee6e9;
+  --footer-background-color: #a8aaab;
+  --contact-form-text-color: #726f6f;
+  --brand-font: "Lemon", serif;
+  --heading-font: "Abhaya Libre", serif;
+  --body-font: "DM Sans", sans-serif;
+}
+h1.navbar-brand {
+  font-family: var(--brand-font);
+  background-color: var(--background-color);
+}
+img.header-image {
+  width: 100%;
+}
+div.navbar {
+  background-color: var(--background-color);
+}
+nav.navbar-nav {
+  display: block;
+  margin: 0 auto;
+}
+ul.navbar-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1em;
+}
+ul.navbar-links li {
+  flex: 1;
+}
+ul.navbar-links li a {
+  border-radius: 4px;
+  padding: 8px;
+  color: #000000;
+  font-family: var(--body-font);
+  font-size: 0.8em;
+  font-weight: 600;
+  transition: all ease-in-out 250ms;
+}
+ul.navbar-links li a:hover {
+  background-color: var(--events-contact-background-color);
+  font-size: 0.7em;
+  padding: 10.5px;
+}
