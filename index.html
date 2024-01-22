@@ -32,8 +32,55 @@
     <div class="container-fluid ps-0 pe-0">
       <header class="relative">
         <section>
-          <div class="nav-bar header">
-            <h1 class="navbar-brand mb-0 text-center p-3">COROLLA NATION KENYA</h1>
+          <div class="nav-bar p-0">
+            <div class="brand-sidebar d-flex">
+              <h1 class="navbar-brand mb-0 text-center p-3 ps-2">
+                COROLLA NATION KENYA
+              </h1>
+              <div onclick="showSidebar()" class="menu-icon m-2 mb-1 pe-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <nav class="navbar p-0">
+              <ul class="navbar-links mb-0 ps-0" id="sidebar">
+                <li onclick="hideSidebar()" class="close-icon ps-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24"
+                    viewBox="0 -960 960 960"
+                    width="24"
+                  >
+                    <path
+                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                    />
+                  </svg>
+                </li>
+                <li class="home-link">
+                  <a href="./" class="home text-decoration-none">Home</a>
+                </li>
+                <li class="about-link">
+                  <a href="" class="about text-decoration-none">About</a>
+                </li>
+                <li class="events-link">
+                  <a href="" class="events text-decoration-none">Events</a>
+                </li>
+                <li class="gallery-link">
+                  <a href="" class="gallery text-decoration-none">Gallery</a>
+                </li>
+                <li class="contact-link">
+                  <a href="" class="contact text-decoration-none">Contact</a>
+                </li>
+              </ul>
+            </nav>
           </div>
           <div class="header-image">
             <img
@@ -43,18 +90,27 @@
             />
           </div>
         </section>
-        <div class="navbar pb-3">
-          <nav class="navbar-nav mt-1">
-            <ul class="navbar-links mb-0 ps-0">
-              <li class="home-link"><a href="./" class="home text-decoration-none">Home</a></li>
-              <li class="about-link"><a href="" class="about text-decoration-none">About</a></li>
-              <li class="events-link"><a href="" class="events text-decoration-none">Events</a></li>
-              <li class="gallery-link"><a href="" class="gallery text-decoration-none">Gallery</a></li>
-              <li class="contact-link"><a href="" class="contact text-decoration-none">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="navbar hideOnMobile">
+          <ul class="navbar-links mb-0 ps-0">
+            <li class="home-link">
+              <a href="./" class="home text-decoration-none">Home</a>
+            </li>
+            <li class="about-link">
+              <a href="" class="about text-decoration-none">About</a>
+            </li>
+            <li class="events-link">
+              <a href="" class="events text-decoration-none">Events</a>
+            </li>
+            <li class="gallery-link">
+              <a href="" class="gallery text-decoration-none">Gallery</a>
+            </li>
+            <li class="contact-link">
+              <a href="" class="contact text-decoration-none">Contact</a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </div>
+    <script src="/src/script.js"></script>
   </body>
 </html>

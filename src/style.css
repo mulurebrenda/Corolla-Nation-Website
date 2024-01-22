@@ -3,11 +3,11 @@
   margin: 0;
 }
 body {
+  min-height: 100vh;
   min-width: 360px;
 }
 .container {
   width: 100%;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -23,31 +23,37 @@ body {
   --heading-font: "Abhaya Libre", serif;
   --body-font: "DM Sans", sans-serif;
 }
+div.nav-bar {
+  height: 50px;
+}
+div.brand-sidebar {
+  background-color: var(--background-color);
+  justify-content: center;
+}
 h1.navbar-brand {
   font-family: var(--brand-font);
-  background-color: var(--background-color);
 }
 img.header-image {
   width: 100%;
 }
-div.navbar {
+nav.navbar {
   background-color: var(--background-color);
-}
-nav.navbar-nav {
+  box-shadow: 3px 3px 5px rgba(6, 6, 6, 0.1);
   display: block;
   margin: 0 auto;
 }
 ul.navbar-links {
+  width: 100%;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  gap: 1em;
+  justify-content: space-evenly;
 }
 ul.navbar-links li {
-  flex: 1;
+  height: 30px;
 }
 ul.navbar-links li a {
+  height: 100%;
   border-radius: 4px;
   padding: 8px;
   color: #000000;
@@ -58,6 +64,51 @@ ul.navbar-links li a {
 }
 ul.navbar-links li a:hover {
   background-color: var(--events-contact-background-color);
-  font-size: 0.7em;
-  padding: 10.5px;
+}
+div.menu-icon {
+  display: none;
+}
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgb(225, 228, 232, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0px 10px rgba(6, 6, 6, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#sidebar li,
+#sidebar a {
+  width: 100%;
+}
+#sidebar li:hover {
+  background-color: var(--events-contact-background-color);
+}
+#sidebar-nav {
+  display: none;
+}
+@media (max-width: 479px) {
+  nav.hideOnMobile {
+    display: none;
+  }
+  div.menu-icon {
+    display: flex;
+  }
+  div.brand-sidebar {
+    justify-content: space-between;
+  }
+  ul.navbar-links li a {
+    padding: 0 8px;
+  }
+}
+@media (max-width: 412px) {
+  #sidebar {
+    width: 100%;
+  }
 }
