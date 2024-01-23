@@ -93,6 +93,24 @@ div.menu-icon {
 #sidebar-nav {
   display: none;
 }
+section.about-section{
+  background-color: var(--about-background-color);
+  text-align: center;
+}
+h2.heading{
+  font-family: var(--heading-font);
+  font-size: 1.3em;
+  font-weight: 700;
+}
+p{
+  font-family: var(--body-font);
+  font-size: 0.8em;
+  line-height: 25px;
+}
+section.events-section{
+  background-color: var(--events-contact-background-color);
+  text-align: center;
+}
 @media (max-width: 479px) {
   nav.hideOnMobile {
     display: none;
