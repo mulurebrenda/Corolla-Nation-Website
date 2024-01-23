@@ -50,37 +50,47 @@
                 </svg>
               </div>
             </div>
-            <nav class="navbar p-0">
-              <ul class="navbar-links mb-0 ps-0" id="sidebar">
-                <li onclick="hideSidebar()" class="close-icon ps-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24"
-                    viewBox="0 -960 960 960"
-                    width="24"
-                  >
-                    <path
-                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                    />
-                  </svg>
-                </li>
-                <li class="home-link">
-                  <a href="./" class="home text-decoration-none">Home</a>
-                </li>
-                <li class="about-link">
-                  <a href="" class="about text-decoration-none">About</a>
-                </li>
-                <li class="events-link">
-                  <a href="" class="events text-decoration-none">Events</a>
-                </li>
-                <li class="gallery-link">
-                  <a href="" class="gallery text-decoration-none">Gallery</a>
-                </li>
-                <li class="contact-link">
-                  <a href="" class="contact text-decoration-none">Contact</a>
-                </li>
-              </ul>
-            </nav>
+            <div id="side-navbar">
+              <nav class="navbar p-0">
+                <ul class="navbar-links mb-0 ps-0" id="sidebar">
+                  <li onclick="hideSidebar()" class="close-icon ps-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24"
+                      viewBox="0 -960 960 960"
+                      width="24"
+                    >
+                      <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                      />
+                    </svg>
+                  </li>
+                  <li class="home-link">
+                    <a href="./" class="home text-decoration-none">Home</a>
+                  </li>
+                  <li class="about-link">
+                    <a href="#aboutSection" class="about text-decoration-none"
+                      >About</a
+                    >
+                  </li>
+                  <li class="events-link">
+                    <a href="#eventsSection" class="events text-decoration-none"
+                      >Events</a
+                    >
+                  </li>
+                  <li class="gallery-link">
+                    <a
+                      href="#gallerySection"
+                      class="gallery text-decoration-none"
+                      >Gallery</a
+                    >
+                  </li>
+                  <li class="contact-link">
+                    <a href="" class="contact text-decoration-none">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
           <div class="header-image">
             <img
@@ -96,13 +106,19 @@
               <a href="./" class="home text-decoration-none">Home</a>
             </li>
             <li class="about-link">
-              <a href="" class="about text-decoration-none">About</a>
+              <a href="#aboutSection" class="about text-decoration-none"
+                >About</a
+              >
             </li>
             <li class="events-link">
-              <a href="" class="events text-decoration-none">Events</a>
+              <a href="#eventsSection" class="events text-decoration-none"
+                >Events</a
+              >
             </li>
             <li class="gallery-link">
-              <a href="" class="gallery text-decoration-none">Gallery</a>
+              <a href="#gallerySection" class="gallery text-decoration-none"
+                >Gallery</a
+              >
             </li>
             <li class="contact-link">
               <a href="" class="contact text-decoration-none">Contact</a>
@@ -110,7 +126,7 @@
           </ul>
         </nav>
       </header>
-      <section class="about-section p-2 pb-4">
+      <section class="about-section p-2 pb-4" id="aboutSection">
         <div class="about-heading mt-2">
           <h2 class="heading">ABOUT</h2>
           <hr class="w-25 m-auto" />
@@ -138,18 +154,18 @@
           </p>
         </div>
       </section>
-      <section class="events-section p-2 pb-4 m-auto">
+      <section class="events-section m-auto" id="eventsSection">
         <div class="events-heading mt-2">
           <h2 class="heading">EVENTS</h2>
           <hr class="w-25 m-auto" />
         </div>
-          <button class="pre-btn">
+        <button class="pre-btn">
           <img src="/media/images/arrow.png" alt="arrow" />
         </button>
         <button class="nxt-btn">
           <img src="/media/images/arrow.png" alt="arrow" />
         </button>
-        <div class="event-container pe-2">
+        <div class="event-container">
           <div class="event p-1">
             <div class="image">
               <img
@@ -256,6 +272,65 @@
             </div>
           </div>
         </div>
+      </section>
+      <section class="gallery-section p-2 pb-4 m-auto" id="gallerySection">
+        <div class="gallery-heading mt-2">
+          <h2 class="heading">GALLERY</h2>
+          <hr class="w-25 m-auto" />
+        </div>
+        <div class="gallery-container">
+          <div class="row">
+            <div class="media col-sm-4">
+              <a href="media/images/img-1.jpg" class="image-link"
+                ><img
+                  src="media/images/img-1.jpg"
+                  alt="Corolla Nation Media"
+                  class="gallery-image img-fluid"
+              /></a>
+            </div>
+            <div class="media col-sm-4">
+              <a href="media/images/img-3.JPG" class="image-link"
+                ><img
+                  src="media/images/img-3.JPG"
+                  alt="Corolla Nation Media"
+                  class="gallery-image img-fluid"
+              /></a>
+            </div>
+            <div class="media col-sm-4">
+              <a href="media/images/img-4.JPG" class="image-link"
+                ><img
+                  src="media/images/img-4.JPG"
+                  alt="Corolla Nation Media"
+                  class="gallery-image"
+              /></a>
+            </div>
+            <div class="media col-sm-4">
+              <a href="media/images/img-5.JPG" class="image-link"
+                ><img
+                  src="media/images/img-5.JPG"
+                  alt="Corolla Nation Media"
+                  class="gallery-image img-fluid"
+              /></a>
+            </div>
+            <div class="media col-sm-4">
+              <a href="media/images/img-6.JPG" class="image-link"
+                ><img
+                  src="media/images/img-6.JPG"
+                  alt="Corolla Nation Media"
+                  class="gallery-image img-fluid"
+              /></a>
+            </div>
+            <div class="media col-sm-4">
+              <a href="media/images/img-7.JPG" class="image-link"
+                ><img
+                  src="media/images/img-7.JPG"
+                  alt="Corolla Nation Media"
+                  class="gallery-image img-fluid"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-page"><button>See More</button></div>
       </section>
     </div>
     <script src="/src/script.js"></script>
