@@ -159,10 +159,6 @@ img.event-image {
 p.details {
   font-size: 0.7em;
 }
-div.arrows {
-  display: flex;
-  justify-content: flex-end;
-}
 .pre-btn, .nxt-btn {
   border: none;
   position: absolute;
@@ -170,7 +166,6 @@ div.arrows {
   cursor: pointer;
   width: 25px;
   height: 70%;
-  
   background-color: var(--events-contact-background-color);
 }
 .pre-btn {
