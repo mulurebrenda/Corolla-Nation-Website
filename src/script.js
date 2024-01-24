@@ -39,3 +39,8 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
+//footer-year
+const now = new Date();
+const year = now.getFullYear();
+const currentYear = document.querySelector(".year");
+currentYear.innerHTML = `${year}`;

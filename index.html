@@ -86,7 +86,11 @@
                     >
                   </li>
                   <li class="contact-link" onclick="hideSidebar()">
-                    <a href="#contactSection" class="contact text-decoration-none">Contact</a>
+                    <a
+                      href="#contactSection"
+                      class="contact text-decoration-none"
+                      >Contact</a
+                    >
                   </li>
                 </ul>
               </nav>
@@ -121,7 +125,9 @@
               >
             </li>
             <li class="contact-link">
-              <a href="#contactSection" class="contact text-decoration-none">Contact</a>
+              <a href="#contactSection" class="contact text-decoration-none"
+                >Contact</a
+              >
             </li>
           </ul>
         </nav>
@@ -343,50 +349,83 @@
         <div class="contact-form p-3">
           <div class="main-aside">
             <div class="aside">
-            <h3 class="sub-heading p-3 ps-0">Get In Touch</h3>
-            <div class="phone">
-              <div class="row contact-info">
-                <div class="col-4 ps-3 pe-1 text-start">
-                  <p><strong>CONTACT INFO:</strong></p>
-                </div>
-                <div class="phone-numbers col-7 ps-1 pe-1">
-                  <p>
-                    +254717262848 +254708155101
-                  </p>
+              <h3 class="sub-heading p-3 ps-0">Get In Touch</h3>
+              <div class="phone">
+                <div class="row contact-info">
+                  <div class="col-4 ps-3 pe-1 text-start">
+                    <p class="contact-info"><strong>CONTACT INFO:</strong></p>
+                  </div>
+                  <div class="phone-numbers col-7 ps-1 pe-1">
+                    <p>+254717262848 +254708155101</p>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="vertical-line m-auto me-2"></div>
+            <div class="main">
+              <h2 class="sub-heading">CONTACT FORM</h2>
+              <form action="" class="m-auto">
+                <input
+                  type="text"
+                  name="full-name"
+                  id="f-name"
+                  placeholder="Name"
+                />
+                <input
+                  type="email"
+                  name="email-address"
+                  id="e-address"
+                  placeholder="Email"
+                />
+                <textarea
+                  class="message"
+                  id="subject"
+                  name="subject"
+                  placeholder="Message"
+                  style="height: 100px"
+                ></textarea>
+                <button type="submit" class="send-btn">SEND</button>
+              </form>
+            </div>
           </div>
-          <div class="vertical-line m-auto me-2"></div>
-          <div class="main ">
-            <h2 class="sub-heading">CONTACT FORM</h2>
-            <form action="" class="m-auto">
-              <input
-                type="text"
-                name="full-name"
-                id="f-name"
-                placeholder="Name"
-              />
-              <input
-                type="email"
-                name="email-address"
-                id="e-address"
-                placeholder="Email"
-              />
-              <textarea
-                class="message"
-                id="subject"
-                name="subject"
-                placeholder="Message"
-                style="height: 100px"
-              ></textarea>
-              <button type="submit" class="send-btn">SEND</button>
-            </form>
-          </div>
-          </div>
-          
         </div>
       </section>
+      <footer class="footer p-2 hidden">
+        <div class="socials pt-3 pb-3 d-flex">
+          <div class="social">
+            <a
+              href="https://www.instagram.com/corolla_nation_ke/?hl=en"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <div class="social">
+            <a
+              href="https://www.threads.net/@corolla_nation_ke"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
+          </div>
+          <div class="social">
+            <a
+              href="https://www.tiktok.com/@corolla_nation_ke"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div class="brand-year">
+          <p class="brand">
+            <strong>Corolla Nation © <span class="year"></span></strong>
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="/src/script.js"></script>
   </body>
