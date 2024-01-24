@@ -35,9 +35,9 @@
           <div class="nav-bar p-0">
             <div class="brand-sidebar d-flex">
               <h1 class="navbar-brand mb-0 text-center p-3 ps-2">
-                COROLLA NATION KENYA
+                Corolla Nation Kenya
               </h1>
-              <div onclick="showSidebar()" class="menu-icon m-2 mb-1 pe-2">
+              <div onclick="showSidebar()" class="menu-icon m-1 pt-1 pe-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
@@ -51,9 +51,9 @@
               </div>
             </div>
             <div id="side-navbar">
-              <nav class="navbar p-0">
+              <nav class="navbar p-0" id="navbar">
                 <ul class="navbar-links mb-0 ps-0" id="sidebar">
-                  <li onclick="hideSidebar()" class="close-icon ps-1">
+                  <li onclick="hideSidebar()" class="close-icon mt-2 ps-1 pb-1">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24"
@@ -65,28 +65,28 @@
                       />
                     </svg>
                   </li>
-                  <li class="home-link">
+                  <li class="home-link" onclick="hideSidebar()">
                     <a href="./" class="home text-decoration-none">Home</a>
                   </li>
-                  <li class="about-link">
+                  <li class="about-link" onclick="hideSidebar()">
                     <a href="#aboutSection" class="about text-decoration-none"
                       >About</a
                     >
                   </li>
-                  <li class="events-link">
+                  <li class="events-link" onclick="hideSidebar()">
                     <a href="#eventsSection" class="events text-decoration-none"
                       >Events</a
                     >
                   </li>
-                  <li class="gallery-link">
+                  <li class="gallery-link" onclick="hideSidebar()">
                     <a
                       href="#gallerySection"
                       class="gallery text-decoration-none"
                       >Gallery</a
                     >
                   </li>
-                  <li class="contact-link">
-                    <a href="" class="contact text-decoration-none">Contact</a>
+                  <li class="contact-link" onclick="hideSidebar()">
+                    <a href="#contactSection" class="contact text-decoration-none">Contact</a>
                   </li>
                 </ul>
               </nav>
@@ -101,7 +101,7 @@
           </div>
         </section>
         <nav class="navbar hideOnMobile">
-          <ul class="navbar-links mb-0 ps-0">
+          <ul class="navbar-links mb-0 ps-0 pt-1">
             <li class="home-link">
               <a href="./" class="home text-decoration-none">Home</a>
             </li>
@@ -121,15 +121,15 @@
               >
             </li>
             <li class="contact-link">
-              <a href="" class="contact text-decoration-none">Contact</a>
+              <a href="#contactSection" class="contact text-decoration-none">Contact</a>
             </li>
           </ul>
         </nav>
       </header>
-      <section class="about-section p-2 pb-4" id="aboutSection">
-        <div class="about-heading mt-2">
+      <section class="about-section p-2 pb-5 hidden" id="aboutSection">
+        <div class="about-heading mt-1">
           <h2 class="heading">ABOUT</h2>
-          <hr class="w-25 m-auto" />
+          <hr class="horizontal m-auto" />
         </div>
         <div class="about-paragraph">
           <p class="about mt-4 w-75 m-auto">
@@ -154,10 +154,10 @@
           </p>
         </div>
       </section>
-      <section class="events-section m-auto" id="eventsSection">
+      <section class="events-section hidden" id="eventsSection">
         <div class="events-heading mt-2">
           <h2 class="heading">EVENTS</h2>
-          <hr class="w-25 m-auto" />
+          <hr class="horizontal m-auto" />
         </div>
         <button class="pre-btn">
           <img src="/media/images/arrow.png" alt="arrow" />
@@ -273,14 +273,14 @@
           </div>
         </div>
       </section>
-      <section class="gallery-section p-2 pb-4 m-auto" id="gallerySection">
+      <section class="gallery-section p-2 pb-4 hidden" id="gallerySection">
         <div class="gallery-heading mt-2">
           <h2 class="heading">GALLERY</h2>
-          <hr class="w-25 m-auto" />
+          <hr class="horizontal m-auto" />
         </div>
         <div class="gallery-container">
           <div class="row">
-            <div class="media col-sm-4">
+            <div class="media col-6 col-sm-4">
               <a href="media/images/img-1.jpg" class="image-link"
                 ><img
                   src="media/images/img-1.jpg"
@@ -288,7 +288,7 @@
                   class="gallery-image img-fluid"
               /></a>
             </div>
-            <div class="media col-sm-4">
+            <div class="media col-6 col-sm-4">
               <a href="media/images/img-3.JPG" class="image-link"
                 ><img
                   src="media/images/img-3.JPG"
@@ -296,7 +296,7 @@
                   class="gallery-image img-fluid"
               /></a>
             </div>
-            <div class="media col-sm-4">
+            <div class="media col-6 col-sm-4">
               <a href="media/images/img-4.JPG" class="image-link"
                 ><img
                   src="media/images/img-4.JPG"
@@ -304,7 +304,7 @@
                   class="gallery-image"
               /></a>
             </div>
-            <div class="media col-sm-4">
+            <div class="media col-6 col-sm-4">
               <a href="media/images/img-5.JPG" class="image-link"
                 ><img
                   src="media/images/img-5.JPG"
@@ -312,7 +312,7 @@
                   class="gallery-image img-fluid"
               /></a>
             </div>
-            <div class="media col-sm-4">
+            <div class="media col-6 col-sm-4">
               <a href="media/images/img-6.JPG" class="image-link"
                 ><img
                   src="media/images/img-6.JPG"
@@ -320,7 +320,7 @@
                   class="gallery-image img-fluid"
               /></a>
             </div>
-            <div class="media col-sm-4">
+            <div class="media col-6 col-sm-4">
               <a href="media/images/img-7.JPG" class="image-link"
                 ><img
                   src="media/images/img-7.JPG"
@@ -330,7 +330,62 @@
             </div>
           </div>
         </div>
-        <div class="gallery-page"><button>See More</button></div>
+        <div class="gallery-page">
+          <a href="" class="text-decoration-none border rounded">See More</a>
+        </div>
+      </section>
+      <section class="contact-section hidden pb-5" id="contactSection">
+        <div class="contact-heading mt-2">
+          <h2 class="heading">CONTACT</h2>
+          <hr class="horizontal m-auto w-75" />
+          <h3 class="sub-heading d-sm-none p-3">Get In Touch</h3>
+        </div>
+        <div class="contact-form p-3">
+          <div class="main-aside">
+            <div class="aside">
+            <h3 class="sub-heading p-3 ps-0">Get In Touch</h3>
+            <div class="phone">
+              <div class="row contact-info">
+                <div class="col-4 ps-3 pe-1 text-start">
+                  <p><strong>CONTACT INFO:</strong></p>
+                </div>
+                <div class="phone-numbers col-7 ps-1 pe-1">
+                  <p>
+                    +254717262848 +254708155101
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vertical-line m-auto me-2"></div>
+          <div class="main ">
+            <h2 class="sub-heading">CONTACT FORM</h2>
+            <form action="" class="m-auto">
+              <input
+                type="text"
+                name="full-name"
+                id="f-name"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                name="email-address"
+                id="e-address"
+                placeholder="Email"
+              />
+              <textarea
+                class="message"
+                id="subject"
+                name="subject"
+                placeholder="Message"
+                style="height: 100px"
+              ></textarea>
+              <button type="submit" class="send-btn">SEND</button>
+            </form>
+          </div>
+          </div>
+          
+        </div>
       </section>
     </div>
     <script src="/src/script.js"></script>
