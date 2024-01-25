@@ -271,7 +271,7 @@ img.gallery-image {
   object-fit: cover;
 }
 img.gallery-image:hover {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 div.gallery-page a {
   color: var(--hover-color);
