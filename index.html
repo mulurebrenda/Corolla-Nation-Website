@@ -30,14 +30,11 @@
   </head>
   <body>
     <div class="container-fluid ps-0 pe-0">
-      <header class="relative">
-        <section>
-          <div class="nav-bar p-0">
-            <div class="brand-sidebar d-flex">
-              <h1 class="navbar-brand mb-0 text-center p-3 ps-2">
-                Corolla Nation Kenya
-              </h1>
-              <div onclick="showSidebar()" class="menu-icon m-1 pt-1 pe-2">
+      <section class="header-section">
+        <div class="content">
+          <div class="navbar">
+            <ul class="navbar-links mb-0 ps-0" id="sidebar">
+              <li onclick="hideSidebar()" class="close-icon mt-2 ps-1 pb-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24"
@@ -45,93 +42,77 @@
                   width="24"
                 >
                   <path
-                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
                   />
                 </svg>
-              </div>
-            </div>
-            <div id="side-navbar">
-              <nav class="navbar p-0" id="navbar">
-                <ul class="navbar-links mb-0 ps-0" id="sidebar">
-                  <li onclick="hideSidebar()" class="close-icon mt-2 ps-1 pb-1">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="24"
-                      viewBox="0 -960 960 960"
-                      width="24"
-                    >
-                      <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                      />
-                    </svg>
-                  </li>
-                  <li class="home-link" onclick="hideSidebar()">
-                    <a href="./" class="home text-decoration-none">Home</a>
-                  </li>
-                  <li class="about-link" onclick="hideSidebar()">
-                    <a href="#aboutSection" class="about text-decoration-none"
-                      >About</a
-                    >
-                  </li>
-                  <li class="events-link" onclick="hideSidebar()">
-                    <a href="#eventsSection" class="events text-decoration-none"
-                      >Events</a
-                    >
-                  </li>
-                  <li class="gallery-link" onclick="hideSidebar()">
-                    <a
-                      href="#gallerySection"
-                      class="gallery text-decoration-none"
-                      >Gallery</a
-                    >
-                  </li>
-                  <li class="contact-link" onclick="hideSidebar()">
-                    <a
-                      href="#contactSection"
-                      class="contact text-decoration-none"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </nav>
+              </li>
+              <li class="home-link" onclick="hideSidebar()">
+                <a href="./" class="home text-decoration-none">Home</a>
+              </li>
+              <li class="about-link" onclick="hideSidebar()">
+                <a href="#aboutSection" class="about text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li class="events-link" onclick="hideSidebar()">
+                <a href="#eventsSection" class="events text-decoration-none"
+                  >Events</a
+                >
+              </li>
+              <li class="gallery-link" onclick="hideSidebar()">
+                <a href="#gallerySection" class="gallery text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="contact-link" onclick="hideSidebar()">
+                <a href="#contactSection" class="contact text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-links mb-0 pt-1 ps-0 hideOnMobile">
+              <li class="home-link">
+                <a href="./" class="home text-decoration-none">Home</a>
+              </li>
+              <li class="about-link">
+                <a href="#aboutSection" class="about text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li class="events-link">
+                <a href="#eventsSection" class="events text-decoration-none"
+                  >Events</a
+                >
+              </li>
+              <li class="gallery-link">
+                <a href="#gallerySection" class="gallery text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="contact-link">
+                <a href="#contactSection" class="contact text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <div onclick="showSidebar()" class="menu-icon pe-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                />
+              </svg>
             </div>
           </div>
-          <div class="header-image">
-            <img
-              src="/media/images/header-image.png"
-              alt="Toyota Corolla Car"
-              class="img-fluid header-image"
-            />
+          <div class="brand">
+            <h1 class="brand-name text-center">Corolla Nation Kenya</h1>
           </div>
-        </section>
-        <nav class="navbar hideOnMobile">
-          <ul class="navbar-links mb-0 ps-0 pt-1">
-            <li class="home-link">
-              <a href="./" class="home text-decoration-none">Home</a>
-            </li>
-            <li class="about-link">
-              <a href="#aboutSection" class="about text-decoration-none"
-                >About</a
-              >
-            </li>
-            <li class="events-link">
-              <a href="#eventsSection" class="events text-decoration-none"
-                >Events</a
-              >
-            </li>
-            <li class="gallery-link">
-              <a href="#gallerySection" class="gallery text-decoration-none"
-                >Gallery</a
-              >
-            </li>
-            <li class="contact-link">
-              <a href="#contactSection" class="contact text-decoration-none"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </nav>
-      </header>
+        </div>
+      </section>
       <section class="about-section p-2 pb-5 hidden" id="aboutSection">
         <div class="about-heading mt-1">
           <h2 class="heading">ABOUT</h2>
@@ -361,7 +342,6 @@
                 </div>
               </div>
             </div>
-            <div class="vertical-line m-auto me-2"></div>
             <div class="main">
               <h2 class="sub-heading">CONTACT FORM</h2>
               <form action="" class="m-auto">
@@ -384,7 +364,7 @@
                   placeholder="Message"
                   style="height: 100px"
                 ></textarea>
-                <button type="submit" class="send-btn">SEND</button>
+                <button type="submit" class="send-btn pt-2">SEND</button>
               </form>
             </div>
           </div>
