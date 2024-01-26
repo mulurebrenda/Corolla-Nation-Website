@@ -95,7 +95,7 @@ ul.navbar-links {
   gap: 1.2em;
 }
 ul.navbar-links li a {
-  color: var(--background-color);
+  color: #fff;
   font-family: var(--body-font);
   font-size: 0.8em;
   font-weight: 600;
