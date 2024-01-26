@@ -9,7 +9,6 @@ body {
 }
 .container {
   min-width: 100vw;
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -66,7 +65,7 @@ div.content {
     background-image: url(/media/images/img-4.JPG);
   }
 }
-div.logo-navbar{
+div.logo-navbar {
   align-items: center;
   justify-content: space-between;
 }
@@ -92,20 +91,19 @@ ul.navbar-links {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
+  gap: 1.2em;
 }
 ul.navbar-links li a {
   color: var(--background-color);
   font-family: var(--body-font);
   font-size: 0.8em;
   font-weight: 600;
-  padding: 1px 4px;
   position: relative;
   transition: all ease-in-out 0.3s;
 }
 ul.navbar-links li a:hover {
   color: var(--hover-color);
-  font-size: 0.78em;
-  padding: 1px 4.5px;
 }
 ul.navbar-links li a::after,
 div.gallery-page a::after,
@@ -417,7 +415,7 @@ p.brand strong {
   form {
     width: 100%;
   }
-  h1.brand-name{
+  h1.brand-name {
     font-size: 1.8em;
   }
 }
