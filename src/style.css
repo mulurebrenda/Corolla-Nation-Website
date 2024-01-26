@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   min-height: 100vh;
 }
@@ -69,18 +71,24 @@ div.logo-navbar {
   align-items: center;
   justify-content: space-between;
 }
-h1.brand-name {
+div.brand{
   width: 100%;
   color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  line-height: 40px;
   font-family: var(--body-font);
+}
+h1.brand-name{
   font-size: 2em;
   font-weight: 700;
-  line-height: 40px;
   letter-spacing: 3px;
+}
+h4.slogan{
+  font-size: 1.2em;
+  color: var(--hover-color);
 }
 ul.hideOnMobile {
   padding-bottom: 10px;
