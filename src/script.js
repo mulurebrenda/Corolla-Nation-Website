@@ -44,3 +44,16 @@ const now = new Date();
 const year = now.getFullYear();
 const currentYear = document.querySelector(".year");
 currentYear.innerHTML = `${year}`;
+
+//animate slogan
+const text = document.querySelector(".slogan");
+const textLoad = () => {
+  setTimeout(() => {
+    text.textContent = "Corolla Owners Club 🇰🇪 ";
+  }, 0);
+  setTimeout(() => {
+    text.textContent = "Life is best with a Rolla";
+  }, 5000);
+}
+textLoad();
+setInterval(textLoad, 10000);
