@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="https://corolla-nation-kenya.netlify.app"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/49f250ac70.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Corolla Nation - Kenya</title>
+  </head>
+  <body>
+    <div class="container-fluid ps-0 pe-0">
+      <section class="header-section">
+        <div class="row logo-navbar d-flex">
+          <div class="col-4 logo">
+            <img
+              src="/media/images/logo-1.png"
+              alt="corolla nation logo"
+              width="70px"
+              class="img-fluid"
+            />
+          </div>
+          <nav class="col-8 navbar">
+            <ul class="navbar-links mb-0 ps-0" id="sidebar">
+              <li onclick="hideSidebar()" class="close-icon mt-2 ps-1 pb-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </li>
+              <li class="home-link" onclick="hideSidebar()">
+                <a href="./" class="home text-decoration-none">Home</a>
+              </li>
+              <li class="about-link" onclick="hideSidebar()">
+                <a href="/about.html" class="about text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li class="events-link" onclick="hideSidebar()">
+                <a href="#eventsSection" class="events text-decoration-none"
+                  >Events</a
+                >
+              </li>
+              <li class="gallery-link" onclick="hideSidebar()">
+                <a href="#gallerySection" class="gallery text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="contact-link" onclick="hideSidebar()">
+                <a href="#contactSection" class="contact text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-links mb-0 pt-1 ps-0 hideOnMobile">
+              <li class="home-link">
+                <a href="./" class="home text-decoration-none">Home</a>
+              </li>
+              <li class="about-link">
+                <a href="/about.html" class="about text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li class="events-link">
+                <a href="#eventsSection" class="events text-decoration-none"
+                  >Events</a
+                >
+              </li>
+              <li class="gallery-link">
+                <a href="#gallerySection" class="gallery text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="contact-link">
+                <a href="#contactSection" class="contact text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <div onclick="showSidebar()" class="menu-icon pe-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                />
+              </svg>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="about-page">
+        <div class="row about-hero ms-2">
+          <div class="col-sm-5 about-image">
+          </div>
+          <div class="col-sm-7 about-intro">
+            <h2 class="heading">About us</h2>
+            <hr class="horizontal w-25" />
+            <h3 class="about-sub-heading">Corolla Owners Club</h3>
+            <p class="about">
+              Corolla Nation is a vibrant community of Corolla owners and
+              enthusiasts who are passionate about the capabilities of this
+              iconic automobile.
+            </p>
+          </div>
+        </div>
+        <div class="row tradition-history-section pt-5 pb-5">
+          <div
+            class="col-md-6 d-none d-md-flex tradition-history-image m-auto"
+          ></div>
+          <div class="col-md-6 tradition-history pe-4">
+            <h4 class="section-heading">Tradition & <span>History</span></h4>
+            <p class="about">
+              The club was founded on August 2nd, 2021 by Charles Mulure and
+              Adnan Shiraz and has grown significantly since its inception, with
+              over 130 members and 20 affiliate members who share the same
+              passion. The club organizes annual events like charity drives, fun
+              drives, and local meetups mostly in Nairobi, where members can
+              come together and share their love for the Corolla. These events
+              are not just for fun and leisure but also for charity, as the club
+              aims to support the people around them and make an impact in the
+              nation.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="/src/script.js"></script>
+  </body>
+</html>
