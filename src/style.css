@@ -7,7 +7,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 .container {
   min-width: 100vw;
@@ -35,7 +36,8 @@ div.hero {
   background: var(--hero-footer-background-color);
   width: 100vw;
 }
-div.content, div.about-image {
+div.content,
+div.about-image {
   height: 60vh;
   position: relative;
   background-position: center;
@@ -70,7 +72,7 @@ div.logo-navbar {
   background-color: var(--background-color);
   align-items: center;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 5px 0 5px 10px;
 }
 div.brand {
   padding-left: 5vw;
@@ -112,7 +114,8 @@ ul.navbar-links li a:hover {
   color: var(--hover-color);
 }
 ul.hideOnMobile li a::after,
-div.gallery-page a::after,
+div.events-page-link a::after,
+div.gallery-page-link a::after,
 button.send-btn::after {
   content: "";
   position: absolute;
@@ -126,7 +129,8 @@ button.send-btn::after {
   transition: transform ease-in-out 0.5s;
 }
 ul.hideOnMobile li a:hover::after,
-div.gallery-page a:hover::after,
+div.events-page-link a:hover::after,
+div.gallery-page-link a:hover::after,
 button.send-btn:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -149,7 +153,7 @@ div.menu-icon {
   align-items: flex-start;
   justify-content: flex-start;
 }
-#sidebar li{
+#sidebar li {
   margin: 10px;
 }
 #sidebar li,
@@ -181,14 +185,12 @@ p {
   font-weight: 550;
   line-height: 25px;
 }
-
 p.about {
   margin: 20px auto 0;
 }
-div.about-heading-paragraph {
-  text-align: start;
-}
-h3.about-sub-heading {
+
+h3.about-sub-heading,
+h3.events-sub-heading {
   font-size: 1.5em;
   font-family: var(--heading-font);
   font-weight: 700;
@@ -206,78 +208,66 @@ div.social a {
 div.social a:hover {
   background-color: var(--hero-footer-background-color);
 }
-div.event-container,
-div.gallery-container {
-  width: 85%;
+section.events-section {
+  margin: auto;
 }
-div.title {
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 h2.sub-heading {
   font-size: 0.85em;
   font-weight: 800;
   margin-top: 10px;
 }
-div.event-container {
-  padding: 20px 8px;
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+div.intro-event-container {
+  flex-direction: row-reverse;
 }
-div.event-container::-webkit-scrollbar {
-  display: none;
+div.event-container{
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
 }
 div.event {
-  flex: 0 0 auto;
-  width: 250px;
-  height: 450px;
+  flex: 1; 
+  background-color: #e3e2e2;
+}
+div.event,
+div.events {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
 }
 div.image {
   position: relative;
+  height: 35vh;
+  border-radius: 8px;
+  background: url(/media/images/new-2019-volkswagen-jetta-2019-toyota-corolla-se-1155959.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+div.event-details {
   width: 100%;
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-img.event-image {
   height: 100%;
-  width: 95%;
-  object-fit: cover;
-}
-p.details {
-  font-size: 0.7em;
-}
-.pre-btn,
-.nxt-btn {
-  border: none;
+  top: 0;
+  right: -100%;
+  color: var(--main-color);
   position: absolute;
-  margin: 5px;
-  cursor: pointer;
-  width: 25px;
-  height: 35%;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background-color: rgb(225, 228, 232, 0.1);
+  backdrop-filter: blur(30px);
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 1.5s;
 }
-.pre-btn {
-  left: 0;
-  transform: rotate(180deg);
-}
-
-.nxt-btn {
+div.event:hover div.event-details,
+div.events:hover div.event-details {
   right: 0;
 }
 
-.pre-btn img,
-.nxt-btn img {
-  opacity: 0.2;
-}
-
-.pre-btn:hover img,
-.nxt-btn:hover img {
-  opacity: 1;
+p.details {
+  font-size: 0.7em;
 }
 
 div.gallery-heading h2 {
@@ -286,6 +276,7 @@ div.gallery-heading h2 {
 div.gallery-container {
   margin: auto;
   padding: 30px 10px 10px;
+  width: 85%;
 }
 img.gallery-image {
   padding-bottom: 15px;
@@ -296,14 +287,22 @@ img.gallery-image {
 img.gallery-image:hover {
   opacity: 0.5;
 }
-div.gallery-page a {
+div.gallery-page-link,
+div.events-page-link {
+  padding: 20px;
+}
+div.gallery-page-link a,
+div.events-page-link a {
+  margin: auto;
   color: var(--main-color);
   font-family: var(--body-font);
-  font-size: 0.8em;
+  font-size: 1em;
+  font-weight: 600;
   position: relative;
   transition: all ease-in-out 0.3s;
 }
-div.gallery-page a:hover {
+div.gallery-page-link a:hover,
+div.events-page-link a:hover {
   color: var(--hover-color);
 }
 h3.sub-heading {
@@ -379,35 +378,37 @@ footer {
 p.brand strong {
   font-size: 0.8em;
 }
-/*about page styling*/
-div.about-intro{
+/*about page*/
+div.about-intro,
+div.events-intro {
   margin: auto;
   padding: 20px 40px;
 }
-div.tradition-history-section{
+div.tradition-history-section {
   margin: auto;
   width: 95%;
 }
-div.about-hero {
-    background-color: var(--hero-footer-background-color);
-    padding-bottom: 40px;
-  }
-div.tradition-history {
-   padding: 50px 25px;
+div.about-hero,
+div.events-hero {
+  background-color: var(--hero-footer-background-color);
+  padding-bottom: 40px;
 }
-h4.section-heading{
+div.tradition-history {
+  padding: 50px 25px;
+}
+h4.section-heading {
   font-family: var(--heading-font);
   font-weight: 800;
   font-size: 2em;
   color: var(--main-color);
 }
-h4.section-heading span{
+h4.section-heading span {
   color: var(--hover-color);
 }
-div.tradition-history p{
-   padding-right: 25px;
+div.tradition-history p {
+  padding-right: 25px;
 }
-div.tradition-history-image{
+div.tradition-history-image {
   height: 50vh;
   position: relative;
   background: url(/media/images/new-2020-toyota-corolla-2020-toyota-corolla-se-white-1155986.png);
@@ -415,17 +416,36 @@ div.tradition-history-image{
   background-repeat: no-repeat;
   background-size: contain;
 }
+/* events-page*/
+div.preview{
+  padding: 10px;
+  height: 50vh;
+}
+img.event-image {
+  position: relative;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+div.events-container{
+  margin: auto;
+  padding: 10px 20px;
+  width: 85%;
+}
+div.events{
+  margin: 5px;
+}
 @media (max-width: 470px) {
   #sidebar {
     width: 100%;
   }
-  div.content{
+  div.content {
     height: 45vh;
   }
-  h1.brand-name{
+  h1.brand-name {
     font-size: 1em;
   }
-  h4.slogan{
+  h4.slogan {
     font-size: 0.6em;
   }
 }
@@ -445,19 +465,17 @@ div.tradition-history-image{
   }
   #sidebar li a {
     line-height: 20px;
-    
   }
-  div.event {
-    flex: 0 0 100%;
-    height: 550px;
+  #event-3 {
+    display: none;
   }
   /*about-page*/
-  div.tradition-history-section{
-  width: 90%;
-}
-div.tradition-history p{
-   padding-right: 0;
-}
+  div.tradition-history-section {
+    width: 90%;
+  }
+  div.tradition-history p {
+    padding-right: 0;
+  }
 }
 
 @media (min-width: 576px) {
@@ -491,12 +509,17 @@ div.tradition-history p{
   h1.brand-name {
     font-size: 1.8em;
   }
-  /*about-page*/
-  div.about-intro {
-  margin: auto;
-  padding: 20px;
-}
-div.tradition-history-section{
-  flex-direction: row-reverse;
-}
+  div.event-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /*about-page & events-page*/
+  div.about-intro,
+  div.events-intro {
+    margin: auto;
+    padding: 20px;
+  }
+  div.tradition-history-section {
+    flex-direction: row-reverse;
+  }
 }

@@ -32,7 +32,7 @@
     <title>Corolla Nation - Kenya</title>
   </head>
   <body>
-    <div class="container-fluid pe-0">
+    <div class="container-fluid ">
       <section class="header-section">
         <div class="row logo-navbar d-flex">
           <div class="col-4 logo">
@@ -66,12 +66,12 @@
                 >
               </li>
               <li class="events-link" onclick="hideSidebar()">
-                <a href="#eventsSection" class="events text-decoration-none"
+                <a href="/events.html" class="events text-decoration-none"
                   >Events</a
                 >
               </li>
               <li class="gallery-link" onclick="hideSidebar()">
-                <a href="#gallerySection" class="gallery text-decoration-none"
+                <a href="/gallery.html" class="gallery text-decoration-none"
                   >Gallery</a
                 >
               </li>
@@ -91,12 +91,12 @@
                 >
               </li>
               <li class="events-link">
-                <a href="#eventsSection" class="events text-decoration-none"
+                <a href="/events.html" class="events text-decoration-none"
                   >Events</a
                 >
               </li>
               <li class="gallery-link">
-                <a href="#gallerySection" class="gallery text-decoration-none"
+                <a href="/gallery.html" class="gallery text-decoration-none"
                   >Gallery</a
                 >
               </li>
@@ -181,126 +181,65 @@
           </div>
         </div>
       </section>
-      <section class="events-section hidden" id="eventsSection">
+      <section class="events-section p-2 m-4 me-2 hidden" id="eventsSection">
         <div class="events-heading mt-2">
           <h2 class="heading">Events</h2>
-          <hr class="horizontal m-auto" />
+          <hr class="horizontal w-25" />
         </div>
-        <button class="pre-btn">
-          <img src="/media/images/arrow.png" alt="arrow" />
-        </button>
-        <button class="nxt-btn">
-          <img src="/media/images/arrow.png" alt="arrow" />
-        </button>
-        <div class="event-container">
-          <div class="event p-1">
-            <div class="image">
-              <img
-                src="/media/images/events.jpg"
-                alt="Corolla Nation Events Poster"
-                class="event-image img-fluid"
-              />
-            </div>
-            <div class="details">
-              <div class="title">
-                <h2 class="sub-heading">Easter Holiday Uganda</h2>
+        <div class="intro-event-container">
+          <div class="event-container ps-0 pe-0 m-auto">
+            <div class="event p-1" id="event-1">
+              <div class="image" id="image-1"></div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Easter Holiday Uganda</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> March 29 - April 1, 2024
+                  <br />
+                  <strong>ACTIVATION MEET:</strong>
+                  <br />
+                  March 10, 2024
+                </p>
               </div>
-              <p class="details">
-                <strong>DATE:</strong> March 29 - April 1, 2024
-                <br />
-                <strong>ACTIVATION MEET:</strong>
-                <br />
-                March 10, 2024
-              </p>
+            </div>
+            <div class="event p-1" id="event-2">
+              <div class="image" id="image-2"></div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Mount Kenya Loop</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> June 1 - 2, 2024
+                  <br />
+                  <strong>ACTIVATION MEET:</strong>
+                  <br />
+                  May 18, 2024
+                </p>
+              </div>
+            </div>
+            <div class="event p-1" id="event-3">
+              <div class="image" id="image-3"></div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Kericho Anniversary Charity Run</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> August 3 - 4, 2024
+                  <br />
+                  <strong>ACTIVATION MEET:</strong>
+                  <br />
+                  July 28, 2024
+                </p>
+              </div>
             </div>
           </div>
-          <div class="event p-1">
-            <div class="image">
-              <img
-                src="/media/images/events.jpg"
-                alt="Corolla Nation Events Poster"
-                class="event-image img-fluid"
-              />
-            </div>
-            <div class="event-details">
-              <div class="title">
-                <h2 class="sub-heading">Mount Kenya Loop</h2>
-              </div>
-              <p class="details">
-                <strong>DATE:</strong> June 1 - 2, 2024
-                <br />
-                <strong>ACTIVATION MEET:</strong>
-                <br />
-                May 18, 2024
-              </p>
-            </div>
-          </div>
-          <div class="event p-1">
-            <div class="image">
-              <img
-                src="/media/images/event3.jpg"
-                alt="Corolla Nation Events Poster"
-                class="event-image img-fluid"
-              />
-            </div>
-            <div class="event-details">
-              <div class="title">
-                <h2 class="sub-heading">Kericho Anniversary Charity Run</h2>
-              </div>
-              <p class="details">
-                <strong>DATE:</strong> August 3 - 4, 2024
-                <br />
-                <strong>ACTIVATION MEET:</strong>
-                <br />
-                July 28, 2024
-              </p>
-            </div>
-          </div>
-          <div class="event p-1">
-            <div class="image">
-              <img
-                src="/media/images/event4.jpg"
-                alt="Corolla Nation Events Poster"
-                class="event-image img-fluid"
-              />
-            </div>
-            <div class="event-details">
-              <div class="title">
-                <h2 class="sub-heading">Malindi Coast Drive</h2>
-              </div>
-              <p class="details">
-                <strong>DATE:</strong> October 19 - 21, 2024
-                <br />
-                <strong>ACTIVATION MEET:</strong>
-                <br />
-                October 13, 2024
-              </p>
-            </div>
-          </div>
-          <div class="event p-1">
-            <div class="image">
-              <img
-                src="/media/images/event5.jpg"
-                alt="Corolla Nation Events Poster"
-                class="event-image img-fluid"
-              />
-            </div>
-            <div class="event-details">
-              <div class="title">
-                <h2 class="sub-heading">Family Fun Day</h2>
-              </div>
-              <p class="details">
-                <strong>DATE:</strong> December 15, 2024
-                <br />
-                <strong>TIME:</strong>
-                <br />
-                10 AM
-              </p>
-            </div>
-          </div>
+        </div>
+        <div class="events-page-link m-auto">
+          <a href="/events.html" class="text-decoration-none">See More</a>
         </div>
       </section>
-      <section class="gallery-section p-2 pb-4 hidden" id="gallerySection">
+      <section class="gallery-section p-2 m-4 me-2 pb-4 hidden" id="gallerySection">
         <div class="gallery-heading mt-2">
           <h2 class="heading">Gallery</h2>
           <hr class="horizontal m-auto" />
@@ -357,11 +296,11 @@
             </div>
           </div>
         </div>
-        <div class="gallery-page">
+        <div class="gallery-page-link">
           <a href="" class="text-decoration-none">See More</a>
         </div>
       </section>
-      <section class="contact-section hidden pb-5" id="contactSection">
+      <section class="contact-section hidden p-2 m-4 me-2 pb-5" id="contactSection">
         <div class="contact-heading mt-2">
           <h2 class="heading">Contact us</h2>
           <hr class="horizontal m-auto w-75" />

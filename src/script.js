@@ -8,24 +8,6 @@ function hideSidebar() {
   sidebar.style.display = "none";
 }
 
-//events-scroll
-const eventContainers = [...document.querySelectorAll(".event-container")];
-const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
-const preBtn = [...document.querySelectorAll(".pre-btn")];
-
-eventContainers.forEach((item, i) => {
-  let containerDimensions = item.getBoundingClientRect();
-  let containerWidth = containerDimensions.width;
-
-  preBtn[i].addEventListener("click", () => {
-    item.scrollLeft -= containerWidth;
-  });
-
-  nxtBtn[i].addEventListener("click", () => {
-    item.scrollLeft += containerWidth;
-  });
-});
-
 //animate-sections
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

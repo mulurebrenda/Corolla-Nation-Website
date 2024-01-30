@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="https://corolla-nation-kenya.netlify.app"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/49f250ac70.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Corolla Nation - Kenya</title>
+  </head>
+  <body>
+    <div class="container-fluid pe-0">
+      <section class="header-section">
+        <div class="row logo-navbar d-flex">
+          <div class="col-4 logo">
+            <img
+              src="/media/images/logo-1.png"
+              alt="corolla nation logo"
+              width="70px"
+              class="img-fluid"
+            />
+          </div>
+          <nav class="col-8 navbar">
+            <ul class="navbar-links mb-0 ps-0" id="sidebar">
+              <li onclick="hideSidebar()" class="close-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 -960 960 960"
+                  width="24"
+                >
+                  <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  />
+                </svg>
+              </li>
+              <li class="home-link" onclick="hideSidebar()">
+                <a href="./" class="home text-decoration-none">Home</a>
+              </li>
+              <li class="about-link" onclick="hideSidebar()">
+                <a href="/about.html" class="about text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li class="events-link" onclick="hideSidebar()">
+                <a href="/events.html" class="events text-decoration-none"
+                  >Events</a
+                >
+              </li>
+              <li class="gallery-link" onclick="hideSidebar()">
+                <a href="/gallery.html" class="gallery text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="contact-link" onclick="hideSidebar()">
+                <a href="#contactSection" class="contact text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-links mb-0 pt-1 ps-0 hideOnMobile">
+              <li class="home-link">
+                <a href="./" class="home text-decoration-none">Home</a>
+              </li>
+              <li class="about-link">
+                <a href="/about.html" class="about text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li class="events-link">
+                <a href="/events.html" class="events text-decoration-none"
+                  >Events</a
+                >
+              </li>
+              <li class="gallery-link">
+                <a href="/gallery.html" class="gallery text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li class="contact-link">
+                <a href="#contactSection" class="contact text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <div onclick="showSidebar()" class="menu-icon pe-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24"
+                viewBox="0 -960 960 960"
+                width="24"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                />
+              </svg>
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section class="events-page">
+        <div class="row events-hero ps-3">
+          <div class="col-sm-5 about-image"></div>
+          <div class="col-sm-7 events-intro">
+            <h2 class="heading">Events</h2>
+            <hr class="horizontal w-25" />
+            <h3 class="events-sub-heading">
+              <span class="year"></span> Events
+            </h3>
+            <p class="about">
+              At the end of every year we always put out a calendar for the next
+              year's events. These are annual events like charity drives, fun
+              drives, and local meetups mostly in Nairobi, where members can
+              come together and share their love for the Corolla.
+            </p>
+          </div>
+        </div>
+        <div class="events-container pt-5 pb-5">
+          <div class="row">
+            <div class="events col-6 col-sm-4 col-md-2">
+              <div class="preview" id="image-1">
+                <img
+                  src="/media/images/events.jpg"
+                  alt="Corolla Nation Events Poster"
+                  class="event-image img-fluid"
+                />
+              </div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Easter Holiday Uganda</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> March 29 - April 1, 2024
+                  <br />
+                  <strong>ACTIVATION MEET:</strong>
+                  <br />
+                  March 10, 2024
+                </p>
+              </div>
+            </div>
+            <div class="events col-6 col-sm-4 col-md-2">
+              <div class="preview" id="image-2">
+                <img
+                  src="/media/images/events.jpg"
+                  alt="Corolla Nation Events Poster"
+                  class="event-image img-fluid"
+                />
+              </div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Mount Kenya Loop</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> June 1 - 2, 2024
+                  <br />
+                  <strong>ACTIVATION MEET:</strong>
+                  <br />
+                  May 18, 2024
+                </p>
+              </div>
+            </div>
+            <div class="events col-6 col-sm-4 col-md-2">
+              <div class="preview" id="image-3">
+                <img
+                  src="/media/images/event3.jpg"
+                  alt="Corolla Nation Events Poster"
+                  class="event-image img-fluid"
+                />
+              </div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Kericho Anniversary Charity Run</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> August 3 - 4, 2024
+                  <br />
+                  <strong>ACTIVATION MEET:</strong>
+                  <br />
+                  July 28, 2024
+                </p>
+              </div>
+            </div>
+            <div class="events col-6 col-sm-4 col-md-2">
+              <div class="preview" id="image-4">
+                <img
+                  src="/media/images/event4.jpg"
+                  alt="Corolla Nation Events Poster"
+                  class="event-image img-fluid"
+                />
+              </div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Malindi Coast Drive</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> October 19 - 21, 2024
+                  <br />
+                  <strong>ACTIVATION MEET:</strong>
+                  <br />
+                  October 13, 2024
+                </p>
+              </div>
+            </div>
+            <div class="events col-6 col-sm-4 col-md-2">
+              <div class="preview" id="image-5">
+                <img
+                  src="/media/images/event5.jpg"
+                  alt="Corolla Nation Events Poster"
+                  class="event-image img-fluid"
+                />
+              </div>
+              <div class="event-details">
+                <div class="title">
+                  <h2 class="sub-heading">Family Fun Day</h2>
+                </div>
+                <p class="details">
+                  <strong>DATE:</strong> December 15, 2024
+                  <br />
+                  <strong>TIME:</strong>
+                  <br />
+                  10 AM
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
