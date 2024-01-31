@@ -32,7 +32,7 @@
     <title>Corolla Nation - Kenya</title>
   </head>
   <body>
-    <div class="container-fluid ">
+    <div class="container-fluid">
       <section class="header-section">
         <div class="row logo-navbar d-flex">
           <div class="col-4 logo ps-3">
@@ -71,15 +71,15 @@
                 >
               </li>
               <li class="gallery-link" onclick="hideSidebar()">
-                <a
-                  href="/gallery.html"
-                  class="gallery text-decoration-none"
-                  id="active"
+                <a href="/gallery.html" class="gallery text-decoration-none"
                   >Gallery</a
                 >
               </li>
               <li class="contact-link" onclick="hideSidebar()">
-                <a href="/contact.html" class="contact text-decoration-none"
+                <a
+                  href="/contact.html"
+                  class="contact text-decoration-none"
+                  id="active"
                   >Contact</a
                 >
               </li>
@@ -99,15 +99,15 @@
                 >
               </li>
               <li class="gallery-link">
-                <a
-                  href="/gallery.html"
-                  class="gallery text-decoration-none"
-                  id="active"
+                <a href="/gallery.html" class="gallery text-decoration-none"
                   >Gallery</a
                 >
               </li>
               <li class="contact-link">
-                <a href="/contact.html" class="contact text-decoration-none"
+                <a
+                  href="/contact.html"
+                  class="contact text-decoration-none"
+                  id="active"
                   >Contact</a
                 >
               </li>
@@ -125,6 +125,55 @@
               </svg>
             </div>
           </nav>
+        </div>
+      </section>
+      <section class="contacts-page">
+        <div class="row contacts-hero ps-4 pe-4 hidden">
+          <div class="col-sm-5 contact-image"></div>
+          <div class="col-sm-7 contacts-intro pe-0">
+            <h2 class="heading">Contact us</h2>
+            <hr class="horizontal w-25" />
+            <h3 class="contacts-sub-heading">Get in touch for more details</h3>
+            <p class="contacts-about">
+              Feel free to get in touch with us for more details
+            </p>
+          </div>
+        </div>
+        <div class="row contact-container pt-5 pb-5">
+          <div class="col-md-4 contact-about m-auto pb-4 pe-2">
+            <h4 class="sub-heading">Write us</h4>
+            <p class="about">Write us a message and we'll get back to you.</p>
+          </div>
+          <div class="col-md-8 contact-form">
+            <form>
+              <input
+                type="text"
+                name="full-name"
+                id="f-name"
+                placeholder="Name"
+              />
+              <input
+                type="email"
+                name="email-address"
+                id="e-address"
+                placeholder="Email"
+              />
+              <textarea
+                class="message"
+                id="subject"
+                name="subject"
+                placeholder="Message"
+                style="height: 100px"
+              ></textarea>
+              <button
+                type="submit"
+                class="send-btn mt-3"
+                onclick="sendButton()"
+              >
+                SEND
+              </button>
+            </form>
+          </div>
         </div>
       </section>
     </div>

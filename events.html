@@ -32,12 +32,12 @@
     <title>Corolla Nation - Kenya</title>
   </head>
   <body>
-    <div class="container-fluid pe-0">
+    <div class="container-fluid">
       <section class="header-section">
         <div class="row logo-navbar d-flex">
-          <div class="col-4 logo">
+          <div class="col-4 logo ps-3">
             <img
-              src="/media/images/logo-1.png"
+              src="/media/images/logo.png"
               alt="corolla nation logo"
               width="70px"
               class="img-fluid"
@@ -66,7 +66,7 @@
                 >
               </li>
               <li class="events-link" onclick="hideSidebar()">
-                <a href="/events.html" class="events text-decoration-none"
+                <a href="/events.html" class="events text-decoration-none" id="active"
                   >Events</a
                 >
               </li>
@@ -76,7 +76,7 @@
                 >
               </li>
               <li class="contact-link" onclick="hideSidebar()">
-                <a href="#contactSection" class="contact text-decoration-none"
+                <a href="/contact.html" class="contact text-decoration-none"
                   >Contact</a
                 >
               </li>
@@ -91,7 +91,7 @@
                 >
               </li>
               <li class="events-link">
-                <a href="/events.html" class="events text-decoration-none"
+                <a href="/events.html" class="events text-decoration-none" id="active"
                   >Events</a
                 >
               </li>
@@ -101,7 +101,7 @@
                 >
               </li>
               <li class="contact-link">
-                <a href="#contactSection" class="contact text-decoration-none"
+                <a href="/contact.html" class="contact text-decoration-none"
                   >Contact</a
                 >
               </li>
@@ -122,8 +122,8 @@
         </div>
       </section>
       <section class="events-page">
-        <div class="row events-hero ps-3">
-          <div class="col-sm-5 about-image"></div>
+        <div class="row events-hero ps-4 pe-3 hidden">
+          <div class="col-sm-5 event-image"></div>
           <div class="col-sm-7 events-intro">
             <h2 class="heading">Events</h2>
             <hr class="horizontal w-25" />
@@ -138,117 +138,106 @@
             </p>
           </div>
         </div>
-        <div class="events-container pt-5 pb-5">
-          <div class="row">
-            <div class="events col-6 col-sm-4 col-md-2">
-              <div class="preview" id="image-1">
-                <img
-                  src="/media/images/events.jpg"
-                  alt="Corolla Nation Events Poster"
-                  class="event-image img-fluid"
-                />
-              </div>
-              <div class="event-details">
-                <div class="title">
-                  <h2 class="sub-heading">Easter Holiday Uganda</h2>
-                </div>
-                <p class="details">
-                  <strong>DATE:</strong> March 29 - April 1, 2024
-                  <br />
-                  <strong>ACTIVATION MEET:</strong>
-                  <br />
-                  March 10, 2024
-                </p>
-              </div>
+        <div class="events-container pt-5 pb-5 ps-3">
+          <div class="row event-date-details hidden">
+            <div class="col-sm-3 date">
+              <i class="fa-regular fa-calendar" style="color: #ea2027"></i>
+              <h2>March 29</h2>
             </div>
-            <div class="events col-6 col-sm-4 col-md-2">
-              <div class="preview" id="image-2">
-                <img
-                  src="/media/images/events.jpg"
-                  alt="Corolla Nation Events Poster"
-                  class="event-image img-fluid"
-                />
-              </div>
-              <div class="event-details">
-                <div class="title">
-                  <h2 class="sub-heading">Mount Kenya Loop</h2>
-                </div>
-                <p class="details">
-                  <strong>DATE:</strong> June 1 - 2, 2024
-                  <br />
-                  <strong>ACTIVATION MEET:</strong>
-                  <br />
-                  May 18, 2024
-                </p>
-              </div>
+            <div class="col-sm-9 details">
+              <h3 class="events-sub-heading">Easter Holiday in Uganda</h3>
+              <p>
+                Join us for a joyous and unforgettable Easter celebration in the
+                heart of Uganda! Immerse yourself in the vibrant culture, rich
+                traditions, and the spirit of togetherness as we mark this
+                special occasion from March 29 to April 1, 2024. Come one, come
+                all, and let's make this Easter Holiday an experience to
+                cherish!
+              </p>
+              <h5>Event Schedule:</h5>
+              <p class="schedule"><strong>Date:</strong> March 29 - April 1, 2024</p>
+              <p class="schedule"><strong>Activation Meet:</strong> March 10, 2024</p>
             </div>
-            <div class="events col-6 col-sm-4 col-md-2">
-              <div class="preview" id="image-3">
-                <img
-                  src="/media/images/event3.jpg"
-                  alt="Corolla Nation Events Poster"
-                  class="event-image img-fluid"
-                />
-              </div>
-              <div class="event-details">
-                <div class="title">
-                  <h2 class="sub-heading">Kericho Anniversary Charity Run</h2>
-                </div>
-                <p class="details">
-                  <strong>DATE:</strong> August 3 - 4, 2024
-                  <br />
-                  <strong>ACTIVATION MEET:</strong>
-                  <br />
-                  July 28, 2024
-                </p>
-              </div>
+          </div>
+          <div class="row event-date-details hidden">
+            <div class="col-sm-3 date">
+              <i class="fa-regular fa-calendar" style="color: #ea2027"></i>
+              <h2>June 1</h2>
             </div>
-            <div class="events col-6 col-sm-4 col-md-2">
-              <div class="preview" id="image-4">
-                <img
-                  src="/media/images/event4.jpg"
-                  alt="Corolla Nation Events Poster"
-                  class="event-image img-fluid"
-                />
-              </div>
-              <div class="event-details">
-                <div class="title">
-                  <h2 class="sub-heading">Malindi Coast Drive</h2>
-                </div>
-                <p class="details">
-                  <strong>DATE:</strong> October 19 - 21, 2024
-                  <br />
-                  <strong>ACTIVATION MEET:</strong>
-                  <br />
-                  October 13, 2024
-                </p>
-              </div>
+            <div class="col-sm-9 details">
+              <h3 class="events-sub-heading">Mount Kenya Loop</h3>
+              <p>
+                Join us for the exhilarating Mount Kenya Loop adventure on June
+                1-2, 2024! This two-day event promises an unforgettable journey
+                through the breathtaking landscapes of Mount Kenya. Before
+                embarking on this thrilling expedition, we will gather for an
+                activation meet where we will receive essential information
+                about the event.
+              </p>
+              <h5>Event Schedule:</h5>
+              <p class="schedule"><strong>Date:</strong> June 1 - 2, 2024</p>
+              <p class="schedule"><strong>Activation Meet:</strong> May 18, 2024</p>
             </div>
-            <div class="events col-6 col-sm-4 col-md-2">
-              <div class="preview" id="image-5">
-                <img
-                  src="/media/images/event5.jpg"
-                  alt="Corolla Nation Events Poster"
-                  class="event-image img-fluid"
-                />
-              </div>
-              <div class="event-details">
-                <div class="title">
-                  <h2 class="sub-heading">Family Fun Day</h2>
-                </div>
-                <p class="details">
-                  <strong>DATE:</strong> December 15, 2024
-                  <br />
-                  <strong>TIME:</strong>
-                  <br />
-                  10 AM
-                </p>
-              </div>
+          </div>
+          <div class="row event-date-details hidden">
+            <div class="col-sm-3 date">
+              <i class="fa-regular fa-calendar" style="color: #ea2027"></i>
+              <h2>August 3</h2>
+            </div>
+            <div class="col-sm-9 details">
+              <h3 class="events-sub-heading">Kericho Anniversary Charity Run</h3>
+              <p>
+                This memorable event is set to take place on August 3-4, 2024.
+                The event isn't just about the thrill of the run; it's about
+                making a positive impact. The Kericho Anniversary Charity Run
+                aims to raise funds for local charitable initiatives,
+                contributing to the betterment of our community.
+              </p>
+              <h5>Event Schedule:</h5>
+              <p class="schedule"><strong>Date:</strong> August 3 - 4, 2024</p>
+              <p class="schedule"><strong>Activation Meet:</strong> July 28, 2024</p>
+            </div>
+          </div>
+          <div class="row event-date-details hidden">
+            <div class="col-sm-3 date">
+              <i class="fa-regular fa-calendar" style="color: #ea2027"></i>
+              <h2>October 19</h2>
+            </div>
+            <div class="col-sm-9 details">
+              <h3 class="events-sub-heading">Malindi Coast Drive</h3>
+              <p>
+                Join us for an unforgettable road trip adventure to Malindi and
+                enjoy breathtaking landscapes, coastal vistas, and cultural
+                wonders that the Malindi has to offer. Get ready to rev up your
+                engines and create lasting memories. Malindi Coast Drive awaits
+                - an adventure of a lifetime!
+              </p>
+              <h5>Event Schedule:</h5>
+              <p class="schedule"><strong>Date:</strong> October 19 - 21, 2024</p>
+              <p class="schedule"><strong>Activation Meet:</strong> October 13, 2024</p>
+            </div>
+          </div>
+          <div class="row event-date-details hidden">
+            <div class="col-sm-3 date">
+              <i class="fa-regular fa-calendar" style="color: #ea2027"></i>
+              <h2>December 15</h2>
+            </div>
+            <div class="col-sm-9 details">
+              <h3 class="events-sub-heading">Family Fun Day</h3>
+              <p>
+                Join us for a delightful day of family bonding and joy at our
+                eagerly anticipated Family Fun Day. From engaging games and
+                crafts to delicious treats and heartwarming moments, this event
+                promises an unforgettable experience for everyone. Save the date
+                for a day filled with laughter, love, and endless family fun!
+              </p>
+              <h5>Event Schedule:</h5>
+              <p class="schedule"><strong>Date:</strong> December 15, 2024</p>
             </div>
           </div>
         </div>
       </section>
     </div>
-    <script src="src/script.js"></script>
+    <script src="/src/script.js"></script>
   </body>
 </html>

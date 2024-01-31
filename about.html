@@ -32,12 +32,12 @@
     <title>Corolla Nation - Kenya</title>
   </head>
   <body>
-    <div class="container-fluid ps-0 pe-0">
+    <div class="container-fluid">
       <section class="header-section">
         <div class="row logo-navbar d-flex">
-          <div class="col-4 logo">
+          <div class="col-4 logo ps-3">
             <img
-              src="/media/images/logo-1.png"
+              src="/media/images/logo.png"
               alt="corolla nation logo"
               width="70px"
               class="img-fluid"
@@ -61,7 +61,7 @@
                 <a href="./" class="home text-decoration-none">Home</a>
               </li>
               <li class="about-link" onclick="hideSidebar()">
-                <a href="/about.html" class="about text-decoration-none"
+                <a href="/about.html" class="about text-decoration-none" id="active"
                   >About</a
                 >
               </li>
@@ -76,7 +76,7 @@
                 >
               </li>
               <li class="contact-link" onclick="hideSidebar()">
-                <a href="#contactSection" class="contact text-decoration-none"
+                <a href="/contact.html" class="contact text-decoration-none"
                   >Contact</a
                 >
               </li>
@@ -86,7 +86,7 @@
                 <a href="./" class="home text-decoration-none">Home</a>
               </li>
               <li class="about-link">
-                <a href="/about.html" class="about text-decoration-none"
+                <a href="/about.html" class="about text-decoration-none" id="active"
                   >About</a
                 >
               </li>
@@ -101,7 +101,7 @@
                 >
               </li>
               <li class="contact-link">
-                <a href="#contactSection" class="contact text-decoration-none"
+                <a href="/contact.html" class="contact text-decoration-none"
                   >Contact</a
                 >
               </li>
@@ -122,7 +122,7 @@
         </div>
       </section>
       <section class="about-page">
-        <div class="row about-hero ps-3">
+        <div class="row about-hero ps-3 hidden">
           <div class="col-sm-5 about-image">
           </div>
           <div class="col-sm-7 about-intro">
@@ -140,7 +140,7 @@
           <div
             class="col-md-6 d-none d-md-flex tradition-history-image m-auto"
           ></div>
-          <div class="col-md-6 tradition-history pe-4">
+          <div class="col-md-6 tradition-history pe-4 hidden">
             <h4 class="section-heading">Tradition & <span>History</span></h4>
             <p class="about">
               The club was founded on August 2nd, 2021 by Charles Mulure and

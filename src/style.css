@@ -27,10 +27,13 @@ body {
 }
 .hidden {
   opacity: 0;
-  transition: all ease-in 0.7s;
+  transition: all ease-in 1s;
 }
 .show {
   opacity: 1;
+}
+#active {
+  color: var(--hover-color);
 }
 div.hero {
   background: var(--hero-footer-background-color);
@@ -74,7 +77,7 @@ div.logo-navbar {
   justify-content: space-between;
   padding: 5px 0 5px 10px;
 }
-div.brand {
+div.brand, div.contact-info {
   padding-left: 5vw;
   margin: auto;
   text-align: start;
@@ -188,7 +191,6 @@ p {
 p.about {
   margin: 20px auto 0;
 }
-
 h3.about-sub-heading,
 h3.events-sub-heading {
   font-size: 1.5em;
@@ -211,39 +213,69 @@ div.social a:hover {
 section.events-section {
   margin: auto;
 }
-
 h2.sub-heading {
-  font-size: 0.85em;
-  font-weight: 800;
+  font-family: var(--heading-font);
+  font-size: 0.7em;
+  font-weight: 700;
   margin-top: 10px;
 }
-div.intro-event-container {
-  flex-direction: row-reverse;
-}
-div.event-container{
+div.event-container {
   padding: 10px 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
 }
 div.event {
-  flex: 1; 
-  background-color: #e3e2e2;
-}
-div.event,
-div.events {
+  height: 200px;
+  flex: 1 1 0;
+  background-color: var(--hero-footer-background-color);
   overflow: hidden;
   border-radius: 10px;
   position: relative;
 }
 div.image {
   position: relative;
-  height: 35vh;
+  height: 50%;
+  margin-top: 10px;
   border-radius: 8px;
+  transition: 1.5s ease-in-out;
+}
+#image-1 {
   background: url(/media/images/new-2019-volkswagen-jetta-2019-toyota-corolla-se-1155959.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+#image-2 {
+  background: url(/media/images/new-2020-toyota-corolla-le-2020-toyota-corolla-le-1155982.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#image-3 {
+  background: url(/media/images/toyota-corolla.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#image-4 {
+  background: url(/media/images/2018-toyota-corolla-xse-toyota-corolla-2019-sedan-1238180.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+div.event-title {
+  text-align: center;
+  border-radius: 10px;
+  padding: 25px 8px 5px;
+  position: relative;
+  transition: 1.5s ease-in-out;
+}
+div.event:hover div.event-title {
+  bottom: -100%;
+}
+div.event:hover div.image {
+  height: 100%;
 }
 div.event-details {
   width: 100%;
@@ -252,24 +284,21 @@ div.event-details {
   right: -100%;
   color: var(--main-color);
   position: absolute;
-  background-color: rgb(225, 228, 232, 0.1);
-  backdrop-filter: blur(30px);
+  background-color: rgb(225, 228, 232, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 5px;
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: 1.5s;
+  transition: 1.5s ease-in-out;
 }
-div.event:hover div.event-details,
-div.events:hover div.event-details {
+div.event:hover div.event-details {
   right: 0;
 }
-
 p.details {
-  font-size: 0.7em;
+  font-size: 0.75em;
 }
-
 div.gallery-heading h2 {
   color: var(--hover-color);
 }
@@ -293,10 +322,9 @@ div.events-page-link {
 }
 div.gallery-page-link a,
 div.events-page-link a {
-  margin: auto;
   color: var(--main-color);
-  font-family: var(--body-font);
-  font-size: 1em;
+  font-family: var(--heading-font);
+  font-size: 1.1em;
   font-weight: 600;
   position: relative;
   transition: all ease-in-out 0.3s;
@@ -305,82 +333,38 @@ div.gallery-page-link a:hover,
 div.events-page-link a:hover {
   color: var(--hover-color);
 }
-h3.sub-heading {
-  font-family: var(--body-font);
-  font-size: 1em;
+h3.contacts-heading{
+  font-family: var(--heading-font);
+  font-size: 1.2em;
   font-weight: 700;
 }
-
-div.contact-form {
-  border-radius: 12px;
-  box-shadow: 5px 2px 8px rgb(215, 215, 215, 0.5);
-  width: 70%;
-  max-width: 520px;
-  background-color: var(--hero-footer-background-color);
-}
-form {
-  display: grid;
-  width: 75%;
-}
-div.aside {
-  display: none;
-}
-h3.sub-heading,
-div.main h2,
-div.contact-info,
-hr.horizontal {
-  color: var(--contact-form-text-border-color);
-}
-p.contact-info strong,
-div.phone-numbers p {
-  font-size: 0.6em;
-}
-div.phone-numbers p {
-  padding-top: 2px;
-}
-form input,
-form textarea {
-  padding: 5px;
-  font-family: var(--body-font);
-  font-size: 0.7em;
-  outline: none;
-  line-height: 30px;
-  background: none;
-  border: none;
-  border-bottom: 1px solid var(--contact-form-text-border-color);
-  transition: border-color 0.5s;
-}
-form input:focus,
-form textarea:focus {
-  border-bottom-color: #0e0e0e;
-}
-button.send-btn {
-  margin: 10px auto;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: var(--body-font);
-  font-size: 1em;
-  font-weight: 700;
+div.contacts-image {
+  height: 40vh;
   position: relative;
-  transition: all ease-in-out 0.3s;
-  color: var(--contact-form-text-border-color);
+  background: url(/media/images/new-2019-volkswagen-jetta-2019-toyota-corolla-se-1155959.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-button.send-btn:hover {
-  color: var(--hover-color);
+p.phone{
+  font-size: 1em;
+  line-height: 30px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  letter-spacing: 0.05em;
 }
 footer {
   background-color: var(--hero-footer-background-color);
   display: grid;
   place-items: center;
 }
-
 p.brand strong {
   font-size: 0.8em;
 }
 /*about page*/
 div.about-intro,
-div.events-intro {
+div.events-intro,
+div.contacts-intro {
   margin: auto;
   padding: 20px 40px;
 }
@@ -389,7 +373,8 @@ div.tradition-history-section {
   width: 95%;
 }
 div.about-hero,
-div.events-hero {
+div.events-hero,
+div.contacts-hero {
   background-color: var(--hero-footer-background-color);
   padding-bottom: 40px;
 }
@@ -417,29 +402,139 @@ div.tradition-history-image {
   background-size: contain;
 }
 /* events-page*/
-div.preview{
-  padding: 10px;
+div.event-image, div.contact-image {
+  height: 60vh;
+  position: relative;
+  background: url(/media/images/Toyota\ Corolla\ 2018\ Le\ Slate\ Metallic.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+div.event-date-details {
+  width: 90%;
+  border-radius: 10px;
+  border: 1px solid rgb(215, 215, 215, 0.3);
+  margin: 40px auto;
+  background-color: #89888841;
+  padding: 30px 10px 15px;
+  transition: all 0.5s ease-in-out;
+}
+div.event-date-details:hover {
+  background-color: var(--hero-footer-background-color);
+  box-shadow: 2px 2px 5px rgb(215, 215, 215, 0.4);
+}
+div.date {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+div.date h2 {
+  font-size: 0.9em;
+  line-height: 30px;
+}
+div.details h5 {
+  color: var(--main-color);
+  font-family: var(--heading-font);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+div.details p {
+  font-size: 0.8em;
+}
+div.details p.schedule {
+  letter-spacing: 0.02em;
+}
+p.schedule strong {
+  font-family: var(--heading-font);
+  font-size: 1em;
+  letter-spacing: 0.04em;
+}
+/*contact-page*/
+div.contact-image {
   height: 50vh;
 }
-img.event-image {
+div.contact-container {
+  margin: 0 20px;
+}
+h3.contacts-sub-heading {
+  font-size: 1.3em;
+  font-family: var(--heading-font);
+  font-weight: 800;
+}
+h4.sub-heading {
+  font-size: 2em;
+  font-family: var(--heading-font);
+  font-weight: 800;
+}
+p.contacts-about{
+ margin-top: 20px;
+  font-size: 0.9em;
+}
+h3.sub-heading {
+  font-family: var(--body-font);
+  font-size: 1em;
+  font-weight: 700;
+}
+form {
+  display: grid;
+}
+p.contact-info strong,
+div.phone-numbers p {
+  font-size: 0.6em;
+}
+div.phone-numbers p {
+  padding-top: 2px;
+}
+form input,
+form textarea {
+  padding: 5px;
+  font-family: var(--body-font);
+  font-size: 0.7em;
+  outline: none;
+  line-height: 30px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--contact-form-text-border-color);
+  transition: border-color 0.5s;
+}
+form input:focus,
+form textarea:focus {
+  border-bottom-color: var(--main-color);
+}
+button.send-btn {
+  margin: 10px auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--body-font);
+  font-size: 1em;
+  font-weight: 700;
   position: relative;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  transition: all ease-in-out 0.3s;
+  color: var(--contact-form-text-border-color);
 }
-div.events-container{
-  margin: auto;
-  padding: 10px 20px;
-  width: 85%;
+button.send-btn:hover {
+  color: var(--hover-color);
 }
-div.events{
-  margin: 5px;
+@media (max-width: 800px) {
+  #event-4 {
+    display: none;
+  }
+}
+@media (min-width:768px) {
+  div.contact-form {
+  padding: 20px 0 20px 50px;
+}
+form{
+    width: 90%;
+   margin-left: 50px;
+  }
 }
 @media (max-width: 470px) {
   #sidebar {
     width: 100%;
   }
-  div.content {
+  div.content, div.contacts-image {
     height: 45vh;
   }
   h1.brand-name {
@@ -447,6 +542,12 @@ div.events{
   }
   h4.slogan {
     font-size: 0.6em;
+  }
+  div.event {
+    height: 160px;
+  }
+  div.event-title {
+    padding: 10px 8px 5px;
   }
 }
 @media (max-width: 576px) {
@@ -476,35 +577,14 @@ div.events{
   div.tradition-history p {
     padding-right: 0;
   }
+  /*contact-page*/
+  div.contact-container{
+    margin: 50px;
+  }
 }
-
 @media (min-width: 576px) {
-  div.brand {
+  div.brand, div.contact-info {
     padding-left: 6vw;
-  }
-  div.contact-form {
-    margin-top: 20px;
-  }
-  div.main-aside {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  h3.sub-heading {
-    display: flex;
-    justify-content: center;
-  }
-  div.main {
-    width: 55%;
-  }
-  div.aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 35%;
-  }
-  form {
-    width: 100%;
   }
   h1.brand-name {
     font-size: 1.8em;
@@ -513,7 +593,13 @@ div.events{
     display: flex;
     flex-wrap: wrap;
   }
-  /*about-page & events-page*/
+  div.event {
+    height: 190px;
+  }
+  div.event-title {
+    padding: 15px 8px 5px;
+  }
+  /*about-page */
   div.about-intro,
   div.events-intro {
     margin: auto;
@@ -522,4 +608,13 @@ div.events{
   div.tradition-history-section {
     flex-direction: row-reverse;
   }
+  /*events-page*/
+  div.event-date-details {
+    width: 80%;
+  }
+  /*contact-page*/
+  div.contact-container{
+    margin: 40px 80px;
+  }
+  
 }
