@@ -220,7 +220,6 @@ h2.sub-heading {
   margin-top: 10px;
 }
 div.event-container {
-  padding: 10px 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
@@ -253,7 +252,7 @@ div.image {
   background-size: contain;
 }
 #image-3 {
-  background: url(/media/images/toyota-corolla.png);
+  background: url(/media/images/Toyota\ Corolla\ E140\ -\ Toyota\ Corolla\ 2010.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -277,7 +276,7 @@ div.event:hover div.event-title {
 div.event:hover div.image {
   height: 100%;
 }
-div.event-details {
+div.event-details{
   width: 100%;
   height: 100%;
   top: 0;
@@ -302,19 +301,69 @@ p.details {
 div.gallery-heading h2 {
   color: var(--hover-color);
 }
-div.gallery-container {
-  margin: auto;
-  padding: 30px 10px 10px;
-  width: 85%;
+div.media-container{
+  padding: 0;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
 }
-img.gallery-image {
-  padding-bottom: 15px;
+div.media {
+  height: 220px;
+  width: 95%;
+  border-radius: 8px;
+  transition: 0.6s ease-in-out;
+}
+#media-1{
+  background: url(/media/images/img-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#media-2{
+  background: url(/media/images/img-5.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#media-3{
+  background: url(/media/images/img-6.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#media-4{
+  background: url(/media/images/img-7.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.full-view{
+  width: 95%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  background-color: rgba(24, 24, 24, 0.1);
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  transition: 0.6s ease-in-out;
+}
+div.media-container:hover div.full-view{
   height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
-img.gallery-image:hover {
-  opacity: 0.5;
+a.image-link{
+  color: var(--main-color);
+  font-size: 1.5em;
+  transition: all 0.2s ease-in-out;
+}
+a.image-link:hover{
+  font-size: 1.4em;
 }
 div.gallery-page-link,
 div.events-page-link {
@@ -374,7 +423,8 @@ div.tradition-history-section {
 }
 div.about-hero,
 div.events-hero,
-div.contacts-hero {
+div.contacts-hero,
+div.gallery-hero {
   background-color: var(--hero-footer-background-color);
   padding-bottom: 40px;
 }
@@ -402,13 +452,29 @@ div.tradition-history-image {
   background-size: contain;
 }
 /* events-page*/
-div.event-image, div.contact-image {
+div.event-image, div.contact-image,div.gallery-image {
   height: 60vh;
   position: relative;
-  background: url(/media/images/Toyota\ Corolla\ 2018\ Le\ Slate\ Metallic.png);
+  background: url();
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  animation: change 30s infinite ease-in;
+}
+
+@keyframes change {
+  0% {
+    background-image: url(/media/images/Toyota\ Corolla\ 2018\ Le\ Slate\ Metallic.png);
+  }
+  33% {
+    background-image: url(/media/images/2018-toyota-corolla-le-2018-honda-civic-sedan-1187679.png);
+  }
+  66% {
+    background-image: url(/media/images/new-toyota-corolla-426166.png);
+  }
+  100% {
+    background-image: url(/media/images/Toyota\ Corolla\ 2018\ Le\ Slate\ Metallic.png);
+  }
 }
 div.event-date-details {
   width: 90%;
@@ -449,6 +515,8 @@ p.schedule strong {
   font-size: 1em;
   letter-spacing: 0.04em;
 }
+/*gallery-page*/
+
 /*contact-page*/
 div.contact-image {
   height: 50vh;
