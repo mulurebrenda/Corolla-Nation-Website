@@ -6,15 +6,10 @@
 html {
   scroll-behavior: smooth;
 }
-body {
-  width: 100%;
-  height: 100vh;
-}
-.container {
-  min-width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+
+div.container-fluid {
+ max-width: 100vw;
+ overflow: hidden;
 }
 :root {
   --main-color: #000000;
@@ -37,7 +32,6 @@ body {
 }
 div.hero {
   background: var(--hero-footer-background-color);
-  width: 100vw;
 }
 div.content,
 div.about-image {
@@ -65,7 +59,6 @@ div.about-image {
   80% {
     background-image: url(/media/images/2017-toyota-corolla-le-genesis-g80-side-view-1237927.png);
   }
-
   100% {
     background-image: url(/media/images/2017-toyota-corolla-le-cvt-toyota-camry-2017-kuwait-1237924.png);
   }
