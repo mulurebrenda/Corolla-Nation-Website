@@ -31,6 +31,9 @@ div.container-fluid {
 .current {
   color: var(--hover-color);
 }
+section.events-section, section.gallery-section, section.contact-section{
+  margin:24px 8px 24px 48px;
+}
 div.hero {
   background: var(--hero-footer-background-color);
 }
@@ -205,9 +208,7 @@ div.social a {
 div.social a:hover {
   background-color: var(--hero-footer-background-color);
 }
-section.events-section {
-  margin: auto;
-}
+
 h2.sub-heading {
   font-family: var(--heading-font);
   font-size: 0.7em;
@@ -770,6 +771,9 @@ button:hover {
   #sidebar li a {
     line-height: 20px;
   }
+  section.events-section, section.gallery-section, section.contact-section{
+  margin:24px 8px 24px 30px;
+}
   #event-3 {
     display: none;
   }
