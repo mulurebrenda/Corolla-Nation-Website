@@ -32,7 +32,7 @@
     <title>Corolla Nation - Kenya</title>
   </head>
   <body>
-    <div class="container-fluid ">
+    <div class="container-fluid ps-0">
       <section class="header-section">
         <div class="row logo-navbar d-flex">
           <div class="col-4 logo ps-4">
@@ -133,13 +133,267 @@
           <div class="col-sm-7 contacts-intro pe-0">
             <h2 class="heading">Gallery</h2>
             <hr class="horizontal w-25" />
-            <h3 class="contacts-sub-heading">Get in touch for more details</h3>
-            <p class="contacts-about">
-              Feel free to get in touch with us for more details
+            <h3 class="gallery-sub-heading">
+              Welcome to our gallery - the place where automotive
+              passion meets artistic expression.
+            </h3>
+            <p class="gallery-about">
+              Immerse yourself in a world of automotive creativity, from classic
+              beauties to modern marvels. Each image tells a story of
+              craftsmanship, dedication, and the shared love for the open road.
+              Whether you're a gearhead or just appreciate the artistry of
+              automobiles, our gallery is the perfect pit stop for your visual
+              journey.
             </p>
           </div>
         </div>
+        <div class="all-images-videos mt-5 hidden">
+          <ul class="gallery-links">
+            <li class="all">
+              <button class="tab" id="all" onclick="showAll()">All</button>
+            </li>
+            <li class="images">
+              <button class="tab" id="images" onclick="showImages()">Images</button>
+            </li>
+            <li class="videos">
+              <button class="tab" id="videos" onclick="showVideos()">Videos</button>
+            </li>
+          </ul>
+        </div>
+        <div class="row gallery-container ps-4 hidden" id="gallery">
+          <!--images-->
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-1"></div>
+            <div class="full-view">
+              <a href="media/images/img-1.jpg" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-2"></div>
+            <div class="full-view">
+              <a href="media/images/img-2.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-3"></div>
+            <div class="full-view">
+              <a href="media/images/img-3.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-4"></div>
+            <div class="full-view">
+              <a href="media/images/img-4.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-5"></div>
+            <div class="full-view">
+              <a href="media/images/img-5.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-6"></div>
+            <div class="full-view">
+              <a href="media/images/img-6.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-7"></div>
+            <div class="full-view">
+              <a href="media/images/img-7.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-8"></div>
+            <div class="full-view">
+              <a href="media/images/img-8.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-9"></div>
+            <div class="full-view">
+              <a href="media/images/img-9.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-10"></div>
+            <div class="full-view">
+              <a href="media/images/img-10.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-11"></div>
+            <div class="full-view">
+              <a href="media/images/img-11.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-12"></div>
+            <div class="full-view">
+              <a href="media/images/img-12.png" class="image-link"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <!--videos-->
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-13">videos</div>
+            <div class="full-view">
+              <a href="media/videos/video-1.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-14"></div>
+            <div class="full-view">
+              <a href="media/videos/video-2.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-15"></div>
+            <div class="full-view">
+              <a href="media/videos/video-3.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-16"></div>
+            <div class="full-view">
+              <a href="media/videos/video-4.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-17"></div>
+            <div class="full-view">
+              <a href="media/videos/video-5.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i>
+              </a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-18"></div>
+            <div class="full-view">
+              <a href="media/videos/video-6.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-19"></div>
+            <div class="full-view">
+              <a href="media/videos/video-7.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-20"></div>
+            <div class="full-view">
+              <a href="media/videos/video-8.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-21"></div>
+            <div class="full-view">
+              <a href="media/videos/video-9.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-22"></div>
+            <div class="full-view">
+              <a href="media/videos/video-10.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-23"></div>
+            <div class="full-view">
+              <a href="media/videos/video-11.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+          <div class="media-container col-sm-6 col-md-3">
+            <div class="media" id="media-24"></div>
+            <div class="full-view">
+              <a href="media/videos/video-12.mp4" class="video-link"
+                ><i class="fa-solid fa-circle-play"></i
+              ></a>
+            </div>
+          </div>
+        </div>
       </section>
+      <footer class="footer p-3 pb-2 hidden">
+        <div class="socials pt-3 pb-3 d-flex">
+          <div class="social">
+            <a
+              href="https://www.instagram.com/corolla_nation_ke/?hl=en"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <div class="social">
+            <a
+              href="https://www.threads.net/@corolla_nation_ke"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-threads"></i>
+            </a>
+          </div>
+          <div class="social">
+            <a
+              href="https://www.tiktok.com/@corolla_nation_ke"
+              class="social-link"
+              target="_blank"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
+        <div class="copyright">
+          <p class="brand">
+            <strong>Corolla Nation © <span class="year"></span></strong>
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="/src/script.js"></script>
   </body>
