@@ -136,9 +136,9 @@ function showAll() {
             </div>
           </div>
 
-          <!--videos-->
+  <!--videos-->
           <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-13">videos</div>
+            <div class="media" id="media-13"></div>
             <div class="full-view">
               <a href="media/videos/video-1.mp4" class="video-link"
                 ><i class="fa-solid fa-circle-play"></i
@@ -340,7 +340,7 @@ function showImages() {
 function showVideos() {
   document.getElementById("gallery").innerHTML = `
    <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-13">videos</div>
+            <div class="media" id="media-13"></div>
             <div class="full-view">
               <a href="media/videos/video-1.mp4" class="video-link"
                 ><i class="fa-solid fa-circle-play"></i
