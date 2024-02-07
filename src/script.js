@@ -1,3 +1,15 @@
+//responsive navbar (hide on scroll up, show on scroll down)
+var scroll1 = window.pageYOffset;
+window.onscroll = function () {
+  var scroll2 = window.pageYOffset;
+  if (scroll1 > scroll2) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+     document.getElementById("navbar").style.top = "-100px";
+  }
+  scroll1 = scroll2;
+}
+
 //sidebar
 function showSidebar() {
   const sidebar = document.querySelector("#sidebar");
@@ -21,7 +33,7 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
 
-//footer-year
+//copyright
 const now = new Date();
 const year = now.getFullYear();
 const currentYear = document.querySelector(".year");
@@ -29,11 +41,11 @@ currentYear.innerHTML = `${year}`;
 
 //gallery-page
 //gallery-tabs
-//var currentTab = document.querySelector(".tab");
+/*let currentTab = document.querySelector(".all");
 //Add 'active' class when users click on the box
-//currentTab.addEventListener("click", function handleClick(event) {
- // event.target.classList.add("current");
-//});
+currentTab.addEventListener("click", function handleClick(event) {
+  event.target.classList.add("current");
+});*/
 
 //all
 function showAll() {
@@ -438,6 +450,6 @@ function showVideos() {
 }
 
 //send button
-//document.querySelector(".send-btn").onclick = function sendButton(event) {
-//event.preventDefault();
-//}
+/*document.querySelector(".send-btn").onclick = function sendButton(event) {
+event.preventDefault();
+}*/
