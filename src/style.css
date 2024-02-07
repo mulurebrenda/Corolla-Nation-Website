@@ -77,6 +77,9 @@ div.logo-navbar {
   z-index: 1;
   transition: all 0.4s;
 }
+div.logo{
+  padding-left: 40px;
+}
 div.brand,
 div.contact-info {
   padding-left: 5vw;
@@ -780,6 +783,9 @@ button#tab:hover {
   div.gallery-image {
     height: 70vh;
   }
+  div.logo{
+  padding-left: 25px;
+}
   ul.hideOnMobile {
     display: none;
   }
