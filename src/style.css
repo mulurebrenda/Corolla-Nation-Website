@@ -38,7 +38,7 @@ div.hero {
 }
 div.content,
 div.about-image {
-  height: 75vh;
+  height: 85vh;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -452,9 +452,12 @@ div.tradition-history-image {
 }
 /* events-page*/
 div.event-image,
+div.contact-image {
+  height: 85vh;
+}
+div.event-image,
 div.contact-image,
 div.gallery-image {
-  height: 70vh;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -481,7 +484,7 @@ div.contacts-hero {
 div.events-intro,
 div.gallery-intro {
   padding-left: 40px;
-  margin: 35px 0 10px;
+  margin: 40px 0 30px;
 }
 div.event-date-details {
   width: 90%;
@@ -527,6 +530,9 @@ section.gallery-page div.gallery-container {
   width: 85%;
   margin: 0 auto 70px;
 }
+div.gallery-image {
+  height: 80vh;
+}
 h3.gallery-sub-heading {
   font-size: 0.95em;
   font-family: var(--heading-font);
@@ -535,9 +541,8 @@ h3.gallery-sub-heading {
 p.gallery-about {
   font-size: 0.8em;
 }
-h3.gallery-sub-heading,
-p.gallery-about {
-  line-height: 20px;
+h3.gallery-sub-heading {
+  line-height: 28px;
 }
 button#tab {
   color: var(--main-color);
@@ -769,8 +774,11 @@ button#tab:hover {
 }
 @media (max-width: 576px) {
   div.content,
-  div.about-image {
-    height: 60vh;
+  div.about-image,
+  div.event-image,
+  div.contact-image,
+  div.gallery-image {
+    height: 70vh;
   }
   ul.hideOnMobile {
     display: none;
@@ -815,6 +823,11 @@ button#tab:hover {
   div.contact-container {
     margin: 50px;
   }
+  div.contacts-intro {
+  padding-left: 20px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
 }
 @media (min-width: 576px) {
   div.event-details {
