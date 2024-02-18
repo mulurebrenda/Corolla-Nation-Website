@@ -31,7 +31,7 @@ div.container-fluid {
 section.events-section,
 section.gallery-section,
 section.contact-section {
-  margin: 24px 8px 24px 48px;
+  margin: 24px 8px 24px 35px;
 }
 div.hero {
   background: var(--hero-footer-background-color);
@@ -68,7 +68,7 @@ div.about-image {
 }
 div.logo-navbar {
   position: fixed;
-  width: 105vw;
+  width: 100vw;
   height: 60px;
   background-color: var(--background-color);
   align-items: center;
@@ -77,7 +77,7 @@ div.logo-navbar {
   z-index: 1;
   transition: all 0.4s;
 }
-div.logo{
+div.logo {
   padding-left: 40px;
 }
 div.brand,
@@ -300,18 +300,21 @@ div.event:hover div.event-details {
 p.details {
   font-size: 0.7em;
 }
+div.gallery-container {
+  margin-left: 5px;
+}
 div.gallery-heading h2 {
   color: var(--hover-color);
 }
 div.media-container {
   padding: 0;
-  margin-top: 20px;
+  margin-top: 9px;
   position: relative;
   overflow: hidden;
 }
 div.media {
   height: 220px;
-  width: 95%;
+  width: 96%;
   border-radius: 8px;
   transition: 0.6s ease-in-out;
 }
@@ -340,7 +343,7 @@ div.media {
   background-size: cover;
 }
 div.full-view {
-  width: 95%;
+  width: 96%;
   height: 0;
   bottom: 0;
   left: 0;
@@ -529,10 +532,7 @@ p.schedule strong {
   letter-spacing: 0.04em;
 }
 /*gallery-page*/
-section.gallery-page div.gallery-container {
-  width: 85%;
-  margin: 0 auto 70px;
-}
+
 div.gallery-image {
   height: 80vh;
 }
@@ -547,9 +547,22 @@ p.gallery-about {
 h3.gallery-sub-heading {
   line-height: 28px;
 }
-button#tab {
+button.gallery-tab {
   color: var(--main-color);
   font-size: 0.8em;
+}
+button.gallery-tab.active {
+  color: var(--hover-color);
+}
+section.gallery-page div.gallery-container {
+  width: 85%;
+  margin: 0 auto 70px;
+}
+section.gallery-page div.gallery-container {
+  display: none;
+}
+section.gallery-page div.gallery-container.active {
+  display: flex;
 }
 #media-5 {
   background: url(/media/images/img-5.png);
@@ -694,20 +707,26 @@ p.contacts-about {
   margin-top: 20px;
   font-size: 0.95em;
 }
+a.contact-link {
+  color: var(--main-color);
+}
+a.contact-link:hover {
+  color: var(--hover-color);
+}
+
 h3.sub-heading {
   font-family: var(--body-font);
   font-size: 1em;
   font-weight: 700;
 }
+
 form {
+  border: 1px solid rgba(194, 191, 191, 0.311);
+  border-radius: 30px;
+  box-shadow: 1px 1px 2px rgba(194, 191, 191, 0.311);
   display: grid;
-}
-p.contact-info strong,
-div.phone-numbers p {
-  font-size: 0.6em;
-}
-div.phone-numbers p {
-  padding-top: 2px;
+  margin-top: 20px;
+  padding: 30px 35px;
 }
 form input,
 form textarea {
@@ -730,7 +749,7 @@ button.send-btn {
   font-size: 1em;
 }
 button.send-btn,
-button#tab {
+button.gallery-tab {
   margin: 10px auto;
   background: none;
   border: none;
@@ -741,8 +760,11 @@ button#tab {
   transition: all ease-in-out 0.3s;
 }
 button.send-btn:hover,
-button#tab:hover {
+button.gallery-tab:hover {
   color: var(--hover-color);
+}
+.swal2-popup {
+  font-size: 0.4em !important;
 }
 @media (max-width: 800px) {
   #event-4 {
@@ -756,6 +778,7 @@ button#tab:hover {
   form {
     width: 90%;
     margin-left: 50px;
+    padding: 20px 45px;
   }
 }
 @media (max-width: 470px) {
@@ -783,9 +806,9 @@ button#tab:hover {
   div.gallery-image {
     height: 70vh;
   }
-  div.logo{
-  padding-left: 25px;
-}
+  div.logo {
+    padding-left: 25px;
+  }
   ul.hideOnMobile {
     display: none;
   }
@@ -830,10 +853,10 @@ button#tab:hover {
     margin: 50px;
   }
   div.contacts-intro {
-  padding-left: 20px;
-  margin-bottom: 30px;
-  margin-top: 0;
-}
+    padding-left: 20px;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
 }
 @media (min-width: 576px) {
   div.event-details {

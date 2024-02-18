@@ -5,10 +5,10 @@ window.onscroll = function () {
   if (scroll1 > scroll2) {
     document.getElementById("navbar").style.top = "0";
   } else {
-     document.getElementById("navbar").style.top = "-100px";
+    document.getElementById("navbar").style.top = "-100px";
   }
   scroll1 = scroll2;
-}
+};
 
 //sidebar
 function showSidebar() {
@@ -39,417 +39,91 @@ const year = now.getFullYear();
 const currentYear = document.querySelector(".year");
 currentYear.innerHTML = `${year}`;
 
-//gallery-page
 //gallery-tabs
-/*let currentTab = document.querySelector(".all");
-//Add 'active' class when users click on the box
-currentTab.addEventListener("click", function handleClick(event) {
-  event.target.classList.add("current");
-});*/
+// Set the initial active tab and content
+const allTab = document.getElementById("all-tab");
+const imagesTab = document.getElementById("images-tab");
+const videosTab = document.getElementById("videos-tab");
+const allContent = document.getElementById("all-content");
+const imagesContent = document.getElementById("images-content");
+const videosContent = document.getElementById("videos-content");
 
-//all
-function showAll() {
-  document.getElementById("gallery").innerHTML = `
-  <!--images-->
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-1"></div>
-            <div class="full-view">
-              <a href="media/images/img-1.jpg" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-2"></div>
-            <div class="full-view">
-              <a href="media/images/img-2.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-3"></div>
-            <div class="full-view">
-              <a href="media/images/img-3.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-4"></div>
-            <div class="full-view">
-              <a href="media/images/img-4.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-5"></div>
-            <div class="full-view">
-              <a href="media/images/img-5.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-6"></div>
-            <div class="full-view">
-              <a href="media/images/img-6.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-7"></div>
-            <div class="full-view">
-              <a href="media/images/img-7.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-8"></div>
-            <div class="full-view">
-              <a href="media/images/img-8.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-9"></div>
-            <div class="full-view">
-              <a href="media/images/img-9.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-10"></div>
-            <div class="full-view">
-              <a href="media/images/img-10.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-11"></div>
-            <div class="full-view">
-              <a href="media/images/img-11.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-12"></div>
-            <div class="full-view">
-              <a href="media/images/img-12.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
+allTab.classList.add("active");
+allContent.classList.add("active");
 
-  <!--videos-->
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-13"></div>
-            <div class="full-view">
-              <a href="media/videos/video-1.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-14"></div>
-            <div class="full-view">
-              <a href="media/videos/video-2.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-15"></div>
-            <div class="full-view">
-              <a href="media/videos/video-3.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-16"></div>
-            <div class="full-view">
-              <a href="media/videos/video-4.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-17"></div>
-            <div class="full-view">
-              <a href="media/videos/video-5.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i>
-              </a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-18"></div>
-            <div class="full-view">
-              <a href="media/videos/video-6.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-19"></div>
-            <div class="full-view">
-              <a href="media/videos/video-7.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-20"></div>
-            <div class="full-view">
-              <a href="media/videos/video-8.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-21"></div>
-            <div class="full-view">
-              <a href="media/videos/video-9.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-22"></div>
-            <div class="full-view">
-              <a href="media/videos/video-10.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-23"></div>
-            <div class="full-view">
-              <a href="media/videos/video-11.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-24"></div>
-            <div class="full-view">
-              <a href="media/videos/video-12.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>`;
+// Handle clicks on the tabs
+allTab.addEventListener("click", () => {
+  allTab.classList.add("active");
+  imagesTab.classList.remove("active");
+  videosTab.classList.remove("active");
+  allContent.classList.add("active");
+  imagesContent.classList.remove("active");
+  videosContent.classList.remove("active");
+});
+
+imagesTab.addEventListener("click", () => {
+  allTab.classList.remove("active");
+  imagesTab.classList.add("active");
+  videosTab.classList.remove("active");
+  allContent.classList.remove("active");
+  imagesContent.classList.add("active");
+  videosContent.classList.remove("active");
+});
+
+videosTab.addEventListener("click", () => {
+  allTab.classList.remove("active");
+  imagesTab.classList.remove("active");
+  videosTab.classList.add("active");
+  allContent.classList.remove("active");
+  imagesContent.classList.remove("active");
+  videosContent.classList.add("active");
+});
+
+//form submit
+const form = document.querySelector("form");
+function sendMessage() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    contact: document.getElementById("phone").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "contact_service";
+  const templateID = "template_sqwv5nl";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((message) => {
+      console.log(message);
+      Swal.fire({
+        width: 150,
+        icon: "success",
+        iconColor: "#ea2027",
+        title: "Message sent!",
+        color: "#ea2027",
+        showConfirmButton: false,
+        timer: 1500,
+        showClass: {
+          popup: `
+      animate__animated
+      animate__fadeInDown
+      animate__faster
+    `,
+        },
+        hideClass: {
+          popup: `
+      animate__animated
+      animate__fadeOutUp
+      animate__faster
+    `,
+        },
+      });
+    })
+    .catch((err) => console.log(err));
 }
 
-//images
-function showImages() {
-  document.getElementById("gallery").innerHTML = `
-   <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-1"></div>
-            <div class="full-view">
-              <a href="media/images/img-1.jpg" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-2"></div>
-            <div class="full-view">
-              <a href="media/images/img-2.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-3"></div>
-            <div class="full-view">
-              <a href="media/images/img-3.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-4"></div>
-            <div class="full-view">
-              <a href="media/images/img-4.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-5"></div>
-            <div class="full-view">
-              <a href="media/images/img-5.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-6"></div>
-            <div class="full-view">
-              <a href="media/images/img-6.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-7"></div>
-            <div class="full-view">
-              <a href="media/images/img-7.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-8"></div>
-            <div class="full-view">
-              <a href="media/images/img-8.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-9"></div>
-            <div class="full-view">
-              <a href="media/images/img-9.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-10"></div>
-            <div class="full-view">
-              <a href="media/images/img-10.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-11"></div>
-            <div class="full-view">
-              <a href="media/images/img-11.jpg" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-12"></div>
-            <div class="full-view">
-              <a href="media/images/img-12.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>`;
-}
-
-//videos
-function showVideos() {
-  document.getElementById("gallery").innerHTML = `
-   <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-13"></div>
-            <div class="full-view">
-              <a href="media/videos/video-1.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-14"></div>
-            <div class="full-view">
-              <a href="media/videos/video-2.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-15"></div>
-            <div class="full-view">
-              <a href="media/videos/video-3.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-16"></div>
-            <div class="full-view">
-              <a href="media/videos/video-4.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-17"></div>
-            <div class="full-view">
-              <a href="media/videos/video-5.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i>
-              </a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-18"></div>
-            <div class="full-view">
-              <a href="media/videos/video-6.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-19"></div>
-            <div class="full-view">
-              <a href="media/videos/video-7.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-20"></div>
-            <div class="full-view">
-              <a href="media/videos/video-8.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-21"></div>
-            <div class="full-view">
-              <a href="media/videos/video-9.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-22"></div>
-            <div class="full-view">
-              <a href="media/videos/video-10.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-23"></div>
-            <div class="full-view">
-              <a href="media/videos/video-11.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-3">
-            <div class="media" id="media-24"></div>
-            <div class="full-view">
-              <a href="media/videos/video-12.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>`;
-}
-
-//send button
-/*document.querySelector(".send-btn").onclick = function sendButton(event) {
-event.preventDefault();
-}*/
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendMessage();
+});
