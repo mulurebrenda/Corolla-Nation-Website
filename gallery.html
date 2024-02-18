@@ -150,20 +150,20 @@
         <div class="all-images-videos mt-5 ms-2 hidden">
           <ul class="gallery-links p-0">
             <li class="all">
-              <button class="gallery-tab ps-2 pe-2" id="all-tab" onclick="showAll()" >All</button>
+              <button class="gallery-tab active ps-2 pe-2" data-filter="all" >All</button>
             </li>
             <li class="images">
-              <button class="gallery-tab" id="images-tab" onclick="showImages()">Images</button>
+              <button class="gallery-tab" data-filter="image">Images</button>
             </li>
             <li class="videos">
-              <button class="gallery-tab" id="videos-tab" onclick="showVideos()">Videos</button>
+              <button class="gallery-tab" data-filter="video">Videos</button>
             </li>
           </ul>
         </div>
         <div class="row gallery-container ps-4 hidden" id="all-content">
           <!--all: images and videos-->
           <!--images-->
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-1"></div>
             <div class="full-view">
               <a href="media/images/img-1.jpg" class="image-link"
@@ -171,7 +171,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-2"></div>
             <div class="full-view">
               <a href="media/images/img-2.png" class="image-link"
@@ -179,7 +179,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-3"></div>
             <div class="full-view">
               <a href="media/images/img-3.png" class="image-link"
@@ -187,7 +187,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-4"></div>
             <div class="full-view">
               <a href="media/images/img-4.png" class="image-link"
@@ -195,7 +195,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-5"></div>
             <div class="full-view">
               <a href="media/images/img-5.png" class="image-link"
@@ -203,7 +203,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-6"></div>
             <div class="full-view">
               <a href="media/images/img-6.png" class="image-link"
@@ -211,7 +211,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-7"></div>
             <div class="full-view">
               <a href="media/images/img-7.png" class="image-link"
@@ -219,7 +219,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-8"></div>
             <div class="full-view">
               <a href="media/images/img-8.png" class="image-link"
@@ -227,7 +227,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-9"></div>
             <div class="full-view">
               <a href="media/images/img-9.png" class="image-link"
@@ -235,7 +235,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-10"></div>
             <div class="full-view">
               <a href="media/images/img-10.png" class="image-link"
@@ -243,7 +243,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-11"></div>
             <div class="full-view">
               <a href="media/images/img-11.png" class="image-link"
@@ -251,7 +251,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="image">
             <div class="media" id="media-12"></div>
             <div class="full-view">
               <a href="media/images/img-12.png" class="image-link"
@@ -261,7 +261,7 @@
           </div>
 
           <!--videos-->
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-13"></div>
             <div class="full-view">
               <a href="media/videos/video-1.mp4" class="video-link"
@@ -269,7 +269,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-14"></div>
             <div class="full-view">
               <a href="media/videos/video-2.mp4" class="video-link"
@@ -277,7 +277,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-15"></div>
             <div class="full-view">
               <a href="media/videos/video-3.mp4" class="video-link"
@@ -285,7 +285,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-16"></div>
             <div class="full-view">
               <a href="media/videos/video-4.mp4" class="video-link"
@@ -293,7 +293,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-17"></div>
             <div class="full-view">
               <a href="media/videos/video-5.mp4" class="video-link"
@@ -301,7 +301,7 @@
               </a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-18"></div>
             <div class="full-view">
               <a href="media/videos/video-6.mp4" class="video-link"
@@ -309,7 +309,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-19"></div>
             <div class="full-view">
               <a href="media/videos/video-7.mp4" class="video-link"
@@ -317,7 +317,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-20"></div>
             <div class="full-view">
               <a href="media/videos/video-8.mp4" class="video-link"
@@ -325,7 +325,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-21"></div>
             <div class="full-view">
               <a href="media/videos/video-9.mp4" class="video-link"
@@ -333,7 +333,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-22"></div>
             <div class="full-view">
               <a href="media/videos/video-10.mp4" class="video-link"
@@ -341,7 +341,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-23"></div>
             <div class="full-view">
               <a href="media/videos/video-11.mp4" class="video-link"
@@ -349,7 +349,7 @@
               ></a>
             </div>
           </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
+          <div class="media-container col-sm-6 col-md-4 col-lg-3" data-type="video">
             <div class="media" id="media-24"></div>
             <div class="full-view">
               <a href="media/videos/video-12.mp4" class="video-link"
@@ -358,204 +358,7 @@
             </div>
           </div>
         </div>
-         <div class="row gallery-container ps-4 hidden" id="images-content">
-          <!--images-->
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-1"></div>
-            <div class="full-view">
-              <a href="media/images/img-1.jpg" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-2"></div>
-            <div class="full-view">
-              <a href="media/images/img-2.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-3"></div>
-            <div class="full-view">
-              <a href="media/images/img-3.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-4"></div>
-            <div class="full-view">
-              <a href="media/images/img-4.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-5"></div>
-            <div class="full-view">
-              <a href="media/images/img-5.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-6"></div>
-            <div class="full-view">
-              <a href="media/images/img-6.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-7"></div>
-            <div class="full-view">
-              <a href="media/images/img-7.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-8"></div>
-            <div class="full-view">
-              <a href="media/images/img-8.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-9"></div>
-            <div class="full-view">
-              <a href="media/images/img-9.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-10"></div>
-            <div class="full-view">
-              <a href="media/images/img-10.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-11"></div>
-            <div class="full-view">
-              <a href="media/images/img-11.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-12"></div>
-            <div class="full-view">
-              <a href="media/images/img-12.png" class="image-link"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-         <div class="row gallery-container ps-4 hidden" id="videos-content">
-          <!--videos-->
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-13"></div>
-            <div class="full-view">
-              <a href="media/videos/video-1.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-14"></div>
-            <div class="full-view">
-              <a href="media/videos/video-2.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-15"></div>
-            <div class="full-view">
-              <a href="media/videos/video-3.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-16"></div>
-            <div class="full-view">
-              <a href="media/videos/video-4.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-17"></div>
-            <div class="full-view">
-              <a href="media/videos/video-5.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i>
-              </a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-18"></div>
-            <div class="full-view">
-              <a href="media/videos/video-6.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-19"></div>
-            <div class="full-view">
-              <a href="media/videos/video-7.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-20"></div>
-            <div class="full-view">
-              <a href="media/videos/video-8.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-21"></div>
-            <div class="full-view">
-              <a href="media/videos/video-9.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-22"></div>
-            <div class="full-view">
-              <a href="media/videos/video-10.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-23"></div>
-            <div class="full-view">
-              <a href="media/videos/video-11.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-          <div class="media-container col-sm-6 col-md-4 col-lg-3">
-            <div class="media" id="media-24"></div>
-            <div class="full-view">
-              <a href="media/videos/video-12.mp4" class="video-link"
-                ><i class="fa-solid fa-circle-play"></i
-              ></a>
-            </div>
-          </div>
-        </div>
+
       </section>
       <footer class="footer p-3 pb-2 hidden">
         <div class="socials pt-3 pb-3 d-flex">

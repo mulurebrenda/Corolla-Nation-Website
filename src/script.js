@@ -40,47 +40,37 @@ const currentYear = document.querySelector(".year");
 currentYear.innerHTML = `${year}`;
 
 //gallery-tabs
-// Set the initial active tab and content
-const allTab = document.getElementById("all-tab");
-const imagesTab = document.getElementById("images-tab");
-const videosTab = document.getElementById("videos-tab");
-const allContent = document.getElementById("all-content");
-const imagesContent = document.getElementById("images-content");
-const videosContent = document.getElementById("videos-content");
+const galleryItems = document.querySelectorAll(".media-container");
+const galleryTabs = document.querySelectorAll(".gallery-tab");
 
-allTab.classList.add("active");
-allContent.classList.add("active");
+function filterItems(type) {
+  galleryItems.forEach((item) => {
+    if (
+      type === "all" ||
+      (type === "image" && item.dataset.type === "image") ||
+      (type === "video" && item.dataset.type === "video")
+    ) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
 
-// Handle clicks on the tabs
-allTab.addEventListener("click", () => {
-  allTab.classList.add("active");
-  imagesTab.classList.remove("active");
-  videosTab.classList.remove("active");
-  allContent.classList.add("active");
-  imagesContent.classList.remove("active");
-  videosContent.classList.remove("active");
+galleryTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    galleryTabs.forEach((tab) => tab.classList.remove("active"));
+    tab.classList.add("active");
+
+    const type = tab.dataset.filter;
+    filterItems(type);
+  });
 });
 
-imagesTab.addEventListener("click", () => {
-  allTab.classList.remove("active");
-  imagesTab.classList.add("active");
-  videosTab.classList.remove("active");
-  allContent.classList.remove("active");
-  imagesContent.classList.add("active");
-  videosContent.classList.remove("active");
-});
-
-videosTab.addEventListener("click", () => {
-  allTab.classList.remove("active");
-  imagesTab.classList.remove("active");
-  videosTab.classList.add("active");
-  allContent.classList.remove("active");
-  imagesContent.classList.remove("active");
-  videosContent.classList.add("active");
-});
+// Show all items initially
+filterItems("all");
 
 //form submit
-const form = document.querySelector("form");
 function sendMessage() {
   var params = {
     name: document.getElementById("name").value,
@@ -119,11 +109,14 @@ function sendMessage() {
     `,
         },
       });
+      return false;
     })
     .catch((err) => console.log(err));
 }
 
-form.addEventListener("submit", (e) => {
+function handleFormSubmit (e) {
   e.preventDefault();
   sendMessage();
-});
+};
+
+

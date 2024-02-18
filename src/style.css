@@ -557,13 +557,10 @@ button.gallery-tab.active {
 section.gallery-page div.gallery-container {
   width: 85%;
   margin: 0 auto 70px;
-}
-section.gallery-page div.gallery-container {
-  display: none;
-}
-section.gallery-page div.gallery-container.active {
   display: flex;
 }
+
+
 #media-5 {
   background: url(/media/images/img-5.png);
   background-position: center;
