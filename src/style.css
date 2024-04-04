@@ -415,8 +415,14 @@ footer {
   place-items: center;
   width: 100%;
 }
-p.brand strong {
+p.brand strong, a.my-portfolio {
   font-size: 0.8em;
+}
+a.my-portfolio{
+  color: var(--contact-form-text-border-color);
+}
+a.my-portfolio:hover{
+  color: var(--hover-color);
 }
 /*about page*/
 div.about-intro {
